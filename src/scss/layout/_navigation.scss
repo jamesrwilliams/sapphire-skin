@@ -1,0 +1,144 @@
+.toolbar {
+	
+	background: #002c56;
+	border-top: 1px solid black;
+	color: white !important;
+	
+}
+
+#logo_nav {
+	
+	height: 50px;
+	width: auto;
+	padding: 5px 10px 10px 10px;
+	
+}
+
+.contain-to-grid,
+.top-bar {
+	
+	background: $colour_primary_dark;
+	
+	.top-bar-section {
+		
+		ul li {
+			
+			background: none;
+			
+		}
+		
+		li a {font-weight: bold;}
+		
+		.left {
+			
+			
+			
+			li:nth-child(1) a {
+				
+				// background: #F39; // Elections Pink
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+.center-img {
+	
+	background: url("/assets/site_resources/circle.svg") #f2f2f2 no-repeat center center;
+	min-height: 250px;
+	min-width: 250px;
+	
+	img {
+		
+		width: 100%;
+		
+	}
+	
+}
+
+@media only screen and (min-width: 641px) {
+  .dropdown-wrapper {
+    background-color: #333333 !important;
+    width: 540px !important;
+    padding: 10px 0;
+  }
+}
+
+#msl_admin {
+	
+	ul {
+		
+		/* Adverts Admin */ 	li:nth-child(1){ display: block; }
+		/* Blog Admin */ 		li:nth-child(2){ display: none; }
+		/* Directory Admin */ 	li:nth-child(3){ display: none; }
+		/* Elections Admin */ 	li:nth-child(4){ display: none; }
+		/* Events Admin */ 		li:nth-child(5){ display: none; }
+		/* Adverts Admin */ 	li:nth-child(6){ display: none; }
+		/* Adverts Admin */ 	li:nth-child(7){ display: none; }
+		/* Adverts Admin */ 	li:nth-child(8){ display: none; }
+		
+		
+	}
+	
+}
+
+nav.master {
+	
+	background: #004990;
+	background: url(http://www.yourstudentsunion.com/stylesheet/Saphire/background.jpg) repeat-x center top;
+	background: -moz-linear-gradient(top,  #004990 1%, #00bde5 53%, #f7f7f7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#004990), color-stop(53%,#00bde5), color-stop(100%,#f7f7f7));
+	background: -webkit-linear-gradient(top,  #004990 1%,#00bde5 53%,#f7f7f7 100%);
+	background: -o-linear-gradient(top,  #004990 1%,#00bde5 53%,#f7f7f7 100%);
+	background: -ms-linear-gradient(top,  #004990 1%,#00bde5 53%,#f7f7f7 100%);
+	background: linear-gradient(to bottom,  #004990 1%,#00bde5 53%,#f7f7f7 100%);
+	
+	height: 150px;
+	
+	#core {
+		
+		background: $colour_primary;
+		
+		
+		ul.msl_navbar {
+		
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	
+		li {
+			
+			float: left;
+			margin-right: 5px;
+			
+			a {
+				
+				background: $colour_primary;
+				
+				color: white;
+				font-weight: 600;
+				display: block;
+				font-size: 0.8em;
+				text-transform: uppercase;
+				padding:5px 12px;
+				
+			}
+		}
+		
+	}
+	
+	}
+	
+}
+
+#hero_logo {
+	
+	margin: 50px 0;
+	width: 500px;
+	margin: 0 auto;
+	display: block;
+	
+}

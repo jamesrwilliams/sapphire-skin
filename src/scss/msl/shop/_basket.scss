@@ -1,0 +1,31 @@
+#basket {
+	 
+	+ h3 { display: none; }
+	
+	a.basket,
+	a.checkout {
+		
+		width: 50%;
+		
+	}
+	
+	
+	a.basket {
+		
+		background: blue;
+		
+	}
+	
+	a.checkout {
+		
+		background: yellow;
+		
+	}
+	
+}
+
+#ctl00_Main_btnProceed {
+	
+	@extend .blue-button;
+	
+}

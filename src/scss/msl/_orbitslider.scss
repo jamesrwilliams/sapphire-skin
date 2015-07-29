@@ -1,0 +1,22 @@
+.orbitslider {
+	
+	max-height: 500px;
+	
+	.news_imageonly .news_image a img {height: auto; width: auto;}	
+			
+	.news_img {
+		
+		width: 720px;
+		height: auto;
+		
+	}
+	
+}
+
+.orbitslider:after {
+	
+	content: "";
+	display: block;
+	clear: both;
+	
+}

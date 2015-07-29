@@ -1,0 +1,55 @@
+header.admin {
+	
+	background: #002c56;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	display: none;
+	
+	#msl_admin {
+		
+		h3 { display: none; }
+		
+		.msl_admin {
+			
+			padding: 0;
+			background: 0;
+			
+		}
+		
+		li {
+			
+			border: 0;
+			
+		}
+		
+		#ulAdmin {
+			
+			li {
+				
+				width: 25%;
+				float: left;
+				margin: 0px;
+				padding: 0;
+				
+				a {
+				 
+				color: white;
+				
+				text-shadow: 0 0.5px 0 #333;
+				
+				}
+				
+			}
+			
+		}
+		
+		#ulAdmin:after {
+			
+			content: "";
+			display: block;
+			clear: both;
+			
+		}
+		
+	}
+	
+}

@@ -1,0 +1,56 @@
+.join {
+	
+	h3 {
+		
+		font-size: 0.8em;
+		background: black;
+		
+	
+	}
+	
+	.join_list {
+		
+		margin: 0;
+		padding: 0;
+		
+		input {
+			
+			display: block;
+			
+		}
+		
+	}
+	
+}
+
+.page_clubs .content {
+	
+	border-left: 1px solid rgba(0,0,0,0.2);
+	
+}
+
+.club_list {
+	
+	ul.msl_organisation_list li {
+		
+		margin: auto !important;
+		padding: inherit !important;
+		
+	}
+	
+	.club_listing {
+		
+		min-height: 300px;
+		
+		.msl-listingitem-link { text-align: center; }
+		
+		img {
+			
+			width: 80%;
+			margin: 0 10%;
+			
+		}
+		
+	}
+	
+}
