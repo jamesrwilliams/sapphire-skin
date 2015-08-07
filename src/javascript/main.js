@@ -1,5 +1,5 @@
 /*
- * 
+ * Core Sapphire Javascript File
  * 
  * @version		0.1
  * @package		com.jamesrwilliams.yourstudentsunion
@@ -8,29 +8,49 @@
  * @copyright 	Copyright (c) 05/07/2015
  *
  */
- 
+
+/**
+ *	Sort Sorts Clubs
+ *
+ *	Wraps each pair output from the MSL orginiaiton list 
+ *	object in a parent <li> element for easy styling. Also
+ *	adds Foundation 5 classes for the grid system.
+ * 
+ */		
 
 function sortSportsClubs(){
 	
 	var divs = $(".club_list .msl_organisation_list li");
     	
-    	for(var i = 0; i < divs.length; i+=2) {
+    for(var i = 0; i < divs.length; i+=2) {
 		
-			divs.slice(i, i+2).wrapAll("<li class='club_listing large-3 medium-6 small-6 column'></li>");
+		divs.slice(i, i+2).wrapAll("<li class='club_listing large-3 medium-6 small-6 column'></li>");
     	
-    	}
-
+    }
 	
 }
 
+/**
+	 *	Rearrange Naviagation	
+	 *
+	 *	Following three lines reogansiae the account dropdown, 
+	 *	removing redundant plain text and separates options 
+	 *	into list elements
+	 * 
+	 */	
+
+function sortNavigation(){
+	
+	$("sidepanel ul li:nth-child(1)").after("<li><a href='/profile/'>Profile</a></li>");
+	$("sidepanel ul").prepend("<li><a href='/account/' class='msl_person'>Account</a></li>");
+	$("#ctl00_usercontrolpanel_liAccount").remove();
+	
+	
+}
 
 $(document).ready(function(){
 	
-	var loggedInFlag = false;
-	
 	$(".small-toggle").click(function(){
-	
-		console.log("Clicked");
 	
 		$(".mobile_toggle").toggleClass("show-for-large-up");
 	
@@ -38,20 +58,14 @@ $(document).ready(function(){
 	
 	if($('.sidepanel').length > 0){
 		
-		console.log("Logged In - Removing Login Button");
-		
 		$(".logged-out").toggle();
 		
 		
 	}else{
-			
-		console.log("Logged Out");
 		
 		$(".logged-in").toggle();
 			
 	}
-	
-	
   
 	/* Add Double Slash to enable Orbit following section.
   
@@ -77,8 +91,9 @@ $(document).ready(function(){
 	
 	/* */
 	
-	sortSportsClubs();
+	$(document).foundation(); // Init Foundation Components
 	
-	$(document).foundation();
+	sortNavigation();
+	sortSportsClubs();
 	
 });

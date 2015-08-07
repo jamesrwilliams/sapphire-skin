@@ -14,3 +14,9 @@ Pages that hold tips and tricks relating to their companion template organisatio
 - [ ] Events Calendar
 - [ ] BankIt Toolkit
 - [ ] Edit / Admin Tool Draw
+
+## Navigation
+
+## Page Templates
+
+Default has a standard sidebar
