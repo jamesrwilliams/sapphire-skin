@@ -35,6 +35,19 @@
 @import "pages/clubs";
 @import "pages/news";
 
+body {
+	
+	background-color: #003665;
+	font-size: 16px;
+	
+}
+
+#skin_Sapphire {
+	
+	background: #f6f6f6;
+	
+}
+
 .activeAdminTools {
 	
 	background: red;
@@ -58,13 +71,6 @@ img {
 	
 	width: 100%;
 	height: auto;
-	
-}
-
-body {
-	
-	font-size: 12px;
-	background: #f6f6f6;
 	
 }
 
