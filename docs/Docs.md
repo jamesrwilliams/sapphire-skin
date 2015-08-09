@@ -17,6 +17,16 @@ Pages that hold tips and tricks relating to their companion template organisatio
 
 ## Navigation
 
+<MSL:Navigation ShowSectionNav="true" StartAtLevel="1" SortBy="DisplayOrder"/>
+
 ## Page Templates
 
 Default has a standard sidebar
+
+http://peek.usertesting.com/
+
+### Clubs
+
+With Child Pages - Womens' Rugby
+
+Without - 

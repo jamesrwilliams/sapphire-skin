@@ -1,11 +1,16 @@
-.join {
+/* ===============================================================
+	
+							Club Mini Site			
+	
+=============================================================== */
+
+.join,
+.products {
 	
 	h3 {
 		
-		font-size: 0.8em;
-		background: black;
+		border-bottom: 1px solid #ccc;
 		
-	
 	}
 	
 	.join_list {
@@ -13,9 +18,10 @@
 		margin: 0;
 		padding: 0;
 		
-		input {
+		.product-price {
 			
 			display: block;
+			margin: 10px 0;
 			
 		}
 		
@@ -23,20 +29,59 @@
 	
 }
 
-.page_clubs .content {
+.side_nav {
 	
-	border-left: 1px solid rgba(0,0,0,0.2);
+	border-right: 1px solid #ddd;
+	// Club List Page
+}
+
+a.org_link {
+	
+	background: blue;
+	
+}
+
+/* ===============================================================
+	
+							Club List			
+	
+=============================================================== */
+
+li a.current {
+	
+	background: blue;
 	
 }
 
 .club_list {
 	
+	.msl-listing-logo img {
+		
+		height: 100px;
+		background: #ccc;
+		
+	}
+	
 	ul.msl_organisation_list li {
 		
 		margin: auto !important;
 		padding: inherit !important;
+		
+		
+	}
+	
+	ul.msl_organisation_list {
+		
+		border-radius: 3px;
 		background: white;
 		
+	}
+	
+	ul.msl_organisation_list:after {
+		
+		content: "";
+		display: block;
+		clear: both;
 		
 	}
 	
