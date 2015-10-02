@@ -459,6 +459,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/src\/pages\/events.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/pages\/events.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/src\/pages\/homepage.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1485,6 +1494,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/src\/scss\/pages\/_eventcalendar.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/scss\/pages\/_eventcalendar.scss",
+		"outputAbbreviatedPath": "\/src\/scss\/css\/_eventcalendar.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/src\/scss\/pages\/_homepage.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1700,7 +1725,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "James Williams",
+"lastSavedByUser": "SU Web",
 "manualImportLinks": {
 	},
 "projectAttributes": {

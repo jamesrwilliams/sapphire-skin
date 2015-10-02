@@ -1,32 +1,3 @@
 .msl_event_calendar {
 	
-	width: 100%;
-	
-	table.msl_event_calendar_title {
-		
-		td {
-			
-			text-align: center;
-			
-		}
-		
-	}
-	
-	.msl-cal-hoverbox {
-		
-		position: absolute;
-		left: 0 !important;
-		bottom: 0 !important;
-		display: none;
-		
-	}
-	
-	.msl-cal-hoverbox:hover {
-		
-		position: absolute;
-		display: block;
-		height: 100px !important;
-		
-	}
-	
 }

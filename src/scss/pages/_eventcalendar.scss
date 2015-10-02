@@ -1,0 +1,112 @@
+.page_whatson {
+	
+	.event_sidebar {
+		
+		padding: 10px;
+		
+		// Event Listing Sidebar
+		* { color: white; text-shadow: none; }
+		
+		
+		background: $colour_primary;
+		
+		table {
+				
+			background: none;
+			border: none;
+				
+		}
+		
+		.msl_event_calendar_today {
+			
+			color: rgba(255,255,255,0.3);
+			
+		}
+		
+		table.msl_event_calendar_title {
+
+			tbody tr {
+			
+				// Nxt & Prev Month Arrow Keys
+				td:nth-of-type(odd) a {
+					
+					display: block;
+					padding: 6px 0;
+					text-align: center;
+					background: rgba(0,0,0,0.4);
+					border: 1px solid #222;
+					color: white !important;
+					font-weight: bold;
+					
+					-webkit-transition: background 1s ease;
+					
+				}
+				
+				td:nth-of-type(odd) a:hover {
+					
+					background: rgba(0,0,0,0.8);
+					
+				}
+				
+				// Center Month
+				td:nth-of-type(2){
+					
+					font-weight: bold;
+					text-align: center;
+					
+				}
+				
+			}
+			
+		}
+		
+		.msl_event_calendar {
+			
+			border: 0 !important;
+			
+		}
+		
+		.month,
+		.othermonth {
+			
+			text-align: center;
+			padding: 5px 0;
+			
+		}
+		
+		// Need the !important flag as MSL useing inline styles for the colours.
+		
+		.msl_event_calendar_selected_day {
+			
+			background: rgba(0,0,0,0.1) !important;
+			
+		}
+		
+		.othermonth {
+			
+			background: rgba(0,0,0,0.2) !important;
+			
+		}
+		
+		table tr:nth-of-type(even) {
+			
+			background: none;
+			
+		}
+		
+	}
+	
+	.event_list {
+		
+		// Main COlumn of Event Threads
+		
+		background:white;
+		border: 1px solid rgba(0,0,0,0.1);
+		border-radius: 5px;
+		overflow: hidden;
+		margin-left: 10px;
+		padding: 10px;
+		
+	}
+	
+}

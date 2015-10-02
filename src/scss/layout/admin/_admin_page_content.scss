@@ -33,3 +33,34 @@
 	}
 	
 }
+
+/*
+==	Page Admin Styles
+*/ 
+
+#page_tree {
+	
+	background-color: white;
+	border: 1px solid rgba(0,0,0,0.1);
+	
+	table {margin-bottom: 0;}
+		
+	table tr td {
+		
+		padding: 0px 10px;
+		
+	}
+	
+	table:after {
+		
+		content: "";
+		display: block;
+		height: 1px;
+		background: rgba(0,0,0,0.1);
+		width: 96.8%;
+		position: absolute;
+		margin-top: -7px;
+		
+	}
+	
+}
