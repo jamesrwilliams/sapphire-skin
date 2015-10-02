@@ -8,28 +8,25 @@
 @import "utilities/type";
 @import "utilities/reset";
 
+@import "orbitslider";
+@import "notification";
+@import "calender";
+@import "comments";
 
-@import "msl/orbitslider";
-@import "msl/notification";
-@import "msl/calender";
-@import "msl/comments";
-@import "msl/news";
+@import "layout/admin/admin_page_content";
+@import "layout/admin/controlpanel";
+@import "layout/admin/login";
+@import "layout/admin/page_tools";
+@import "layout/admin/toolbar";
 
+@import "modules/modules";
 
-@import "msl/admin/admin_page_content";
-@import "msl/admin/controlpanel";
-@import "msl/admin/login";
-@import "msl/admin/page_tools";
-
-@import "msl/shop/product";
-@import "msl/shop/basket";
-@import "msl/shop/checkout";
-
+@import "widgets/widget_panel";
 
 @import "layout/navigation";
 @import "layout/footer";
 
-
+@import "pages/homepage";
 @import "pages/societies";
 @import "pages/clubs";
 @import "pages/news";

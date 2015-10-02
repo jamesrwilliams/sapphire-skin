@@ -2,7 +2,7 @@
 	
 	#ctl00_Main_btnPublish {
 		
-		background: green;
+		@extend .green-button;
 		
 	}
 	

@@ -1,3 +1,5 @@
+/*
+
 header.admin {
 	
 	background: #002c56;
@@ -57,5 +59,13 @@ header.admin {
 .msl_toolbarbutton_firstitem {
 	
 	height: auto;
+	
+}
+
+*/
+
+a#ctl00_ctl00_Main_AdminPageContent_lnkSiteDesign {
+	
+	@extend .green-button;
 	
 }

@@ -34,7 +34,7 @@
 
 .root_button_small {
 	
-	@extend .root_button;
+	@extend .root_button_small;
 	
 	padding: 0.77778rem 1.55556rem 0.83333rem 1.55556rem;
 	font-size: 0.72222rem;
@@ -43,7 +43,7 @@
 
 .blue-button {
 
-	@extend .root_button;
+	@extend .root_button_small;
 	
 	background-color: #008CBA;
 	border-color: #007095;
@@ -134,6 +134,15 @@ input[value="Add to Basket"]{
 	
 	
 }
+
+/* ===============================================================
+	
+						
+	
+=============================================================== */
+
+
+
 
 // Removes Icons
 .msl_email,

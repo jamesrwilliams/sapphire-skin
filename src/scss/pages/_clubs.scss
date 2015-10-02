@@ -47,33 +47,33 @@ a.org_link {
 	
 =============================================================== */
 
-li a.current {
-	
-	background: blue;
-	
-}
+
 
 .club_list {
 	
+	margin: -1rem !important;
+	
 	.msl-listing-logo img {
 		
-		height: 100px;
-		background: #ccc;
+		height: 125px;
 		
 	}
 	
 	ul.msl_organisation_list li {
 		
-		margin: auto !important;
-		padding: inherit !important;
+		margin: 10px 0;
+		text-align: center;
+		font-weight: bold;
 		
 		
 	}
 	
 	ul.msl_organisation_list {
 		
-		border-radius: 3px;
-		background: white;
+	    border-radius: 3px;
+	    padding: 10px;
+	    background: white;
+	    border: 1px solid #ddd;
 		
 	}
 	
@@ -87,16 +87,24 @@ li a.current {
 	
 	.club_listing {
 		
-		min-height: 300px;
+		min-height: 205px;
 		
 		.msl-listingitem-link { text-align: center; }
 		
 		img {
-			
-			width: 80%;
-			margin: 0 10%;
+		
+			display: block;
+			margin: 0 auto;
 			
 		}
+		
+		-webkit-transition: all 0.5s ease;
+		
+	}
+	
+	.club_listing:hover {
+		
+		background: #eee;
 		
 	}
 	

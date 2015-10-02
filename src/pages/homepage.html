@@ -1,60 +1,61 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <div class="row">
 	
 	<div class="large-9 medium-9 small-12 column">
 
-		<div class="orbitslider"><img src="http://placehold.it/720x400" height="400" width="720" /></div>
-
-	</div>
+		<div class="orbitslider-container">
 	
-	<div class="large-3 medium-3 small-12 column">
-
-		<h4 class="subheader">Quick Links</h4>
-		
-			<ul class="stack button-group">
-				
-				<li><a href="https://fs.connect.glos.ac.uk/adfs/ls/?wa=wsignin1.0&amp;wtrealm=urn:federation:MicrosoftOnline&amp;wctx=wa%3Dwsignin1.0%26rpsnv%3D4%26ct%3D1437928639%26rver%3D6.6.6556.0%26wp%3DMBI_SSL%26wreply%3Dhttps:%252F%252Foutlook.office365.com%252Fowa%252F%253Frealm%253DCONNECT.GLOS.AC.UK%26id%3D260563%26whr%3DCONNECT.GLOS.AC.UK%26CBCXT%3Dout" class="button expand">Student Email</a></li>
-				<li><a href="https://reportdata.glos.ac.uk/Reports?/SPlus+Reporting/SPlus+Student+Reports/Student+Timetable+(Calendar+View)&amp;rs:Command=Render%22%20target=_blank" class="button expand">Timetable</a></li>
-				<li><a href="http://moodle.glos.ac.uk" class="button expand">Moodle</a></li>
-				<li><a href="http://studentrecords.glos.ac.uk" class="button expand">Student Records</a></li>
-				
-			</ul>
+			<img src="http://placehold.it/720x400" style="opacity: 0;" />
+			<div class="orbitslider">{orbitslider}</div>
 	
 		</div>
+	
+	</div>
+	<div class="show-for-small-only">&nbsp;</div>
+	<div class="large-3 medium-3 small-12 column">
 
+		<div class="quick-links">
+
+			<h4>Quick Links</h4>
+			
+			<ul>
+				
+				<li><a href="https://fs.connect.glos.ac.uk/adfs/ls/?wa=wsignin1.0&amp;wtrealm=urn:federation:MicrosoftOnline&amp;wctx=wa%3Dwsignin1.0%26rpsnv%3D4%26ct%3D1437928639%26rver%3D6.6.6556.0%26wp%3DMBI_SSL%26wreply%3Dhttps:%252F%252Foutlook.office365.com%252Fowa%252F%253Frealm%253DCONNECT.GLOS.AC.UK%26id%3D260563%26whr%3DCONNECT.GLOS.AC.UK%26CBCXT%3Dout">Student Email</a></li>
+				<li><a href="https://reportdata.glos.ac.uk/Reports?/SPlus+Reporting/SPlus+Student+Reports/Student+Timetable+(Calendar+View)&amp;rs:Command=Render%22%20target=_blank">Timetable</a></li>
+				<li><a href="http://moodle.glos.ac.uk">Moodle</a></li>
+				<li><a href="http://studentrecords.glos.ac.uk">Student Records</a></li>
+				
+			</ul>
+				
+		</div>
+	
 	</div>
 
-<hr />
+</div>
+	
+<br />
 
 <div class="row">
 
 	<div class="large-6 medium-6 small-12 column">
 
-		<h4>News</h4>
 		{sapphirenews}
+		
 	</div> 
 
 	<div class="large-6 medium-6 small-12 column">
 
-		<h4>Whats On</h4>
 		{eventlist}
 
 	</div>  
 
 </div>
-
+	<br />
 <div class="row">
 	
 	<div class="large-4 medium-4 small-12 column">
 		
-		<p>Twitter</p>
+		<a class="twitter-timeline" href="https://twitter.com/yoursu" data-widget-id="641326016166760448">Tweets by @yoursu</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		
 	</div>
 	
@@ -68,7 +69,7 @@
 	
 	<div class="large-4 medium-4 small-12 column">
 		
-		<div class="fb-page"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/uogstudentsunion"><a href="https://www.facebook.com/uogstudentsunion">University of Gloucestershire Students' Union</a></blockquote></div></div>
+		<div class="fb-page" data-href="https://www.facebook.com/uogstudentsunion" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/uogstudentsunion"><a href="https://www.facebook.com/uogstudentsunion">University of Gloucestershire Students&#039; Union</a></blockquote></div></div>
 		
 	</div>
 	
@@ -86,7 +87,7 @@
 
 <div class="row">
 
-	<div class="large-3 medium-6 small-6 column">
+	<div class="large-3 medium-3 small-6 column">
 		
 		<div class="panel">
 			
@@ -100,8 +101,8 @@
 		
 	</div>
 	
-	<div class="large-3 medium-6 small-6 column">
-		
+	<div class="large-3 medium-3 small-6 column">
+				
 		<div class="panel">
 			
 			<img src="/pageassets/IMG_2347.JPG" alt="" />
@@ -114,7 +115,7 @@
 		
 	</div> 
 	
-	<div class="large-3 medium-6 small-6 column">
+	<div class="large-3 medium-3 small-6 column">
 		
 		<div class="panel">
 			
@@ -128,7 +129,7 @@
 		
 	</div> 
 	
-	<div class="large-3 medium-6 small-6 column">
+	<div class="large-3 medium-3 small-6 column">
 		
 		<div class="panel">
 			

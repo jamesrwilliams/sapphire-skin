@@ -8,6 +8,86 @@
  * @copyright 	Copyright (c) 05/07/2015
  *
  */
+ 
+
+/**
+ *	Handle The Visibility Change
+ * 
+ */		
+ 
+var hidden, visibilityChange; 
+if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
+  hidden = "hidden";
+  visibilityChange = "visibilitychange";
+} else if (typeof document.mozHidden !== "undefined") {
+  hidden = "mozHidden";
+  visibilityChange = "mozvisibilitychange";
+} else if (typeof document.msHidden !== "undefined") {
+  hidden = "msHidden";
+  visibilityChange = "msvisibilitychange";
+} else if (typeof document.webkitHidden !== "undefined") {
+  hidden = "webkitHidden";
+  visibilityChange = "webkitvisibilitychange";
+}
+
+
+
+function handleVisibilityChange() {
+  if (document[hidden]) {
+    Clock.pause();
+  } else {
+    Clock.resume();
+  }
+}
+
+/**
+ *	JS Clock Object
+ *
+ *	Controlls the sldier elements and pauses using the Page Visibility API
+ *	when page is idle.
+ * 
+ */		
+
+var slideSpeed = 10000;
+
+var Clock = {
+		
+	totalSeconds: 0,
+
+	start: function () {
+
+		var self = this;
+
+		this.interval = setInterval(function () {
+		self.totalSeconds += 1;
+
+		$('.orbitslider .news_1col > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('.orbitslider .news_1col');
+		
+		
+		
+	}, slideSpeed);
+
+	},
+
+	pause: function () {
+
+		clearInterval(this.interval);
+		delete this.interval;
+
+	},
+
+	resume: function () {
+
+		if (!this.interval) this.start();
+
+	}
+
+};
 
 /**
  *	Sort Sorts Clubs
@@ -31,13 +111,13 @@ function sortSportsClubs(){
 }
 
 /**
-	 *	Rearrange Naviagation	
-	 *
-	 *	Following three lines reogansiae the account dropdown, 
-	 *	removing redundant plain text and separates options 
-	 *	into list elements
-	 * 
-	 */	
+ *	Rearrange Naviagation	
+ *
+ *	Following three lines reogansiae the account dropdown, 
+ *	removing redundant plain text and separates options 
+ *	into list elements
+ * 
+ */	
 
 function sortNavigation(){
 	
@@ -48,13 +128,56 @@ function sortNavigation(){
 	
 }
 
+/**
+ *	Reorders the Skins CSS Imports in the <HEAD>
+ *
+ *	Moves the skin stylesheet to the bototm of the <HEAD> to allow easy 
+ *	overrides of MSL defaults rather than using the css !important directive.
+ * 
+ */		
+
+function reOrderCSSImports(){
+
+	$("head").append($("link[href='/stylesheet/Sapphire/foundation.css']"));
+	$("head").append($("link[href='/stylesheet/Sapphire/main.css']"));
+	
+}
+
+ window.onload = function() { 
+  
+    // Delay to allow the async Google Ads to load
+    setTimeout(function() { 
+      
+      // Get the first AdSense ad unit on the page
+      var ad = document.querySelector("ins.adsbygoogle");
+      
+      // If the ads are not loaded, track the event
+      if (ad && ad.innerHTML.replace(/\s/g, "").length == 0) {
+ 
+        if (typeof ga !== 'undefined') {
+ 
+            // Log an event in Universal Analytics
+            // but without affecting overall bounce rate
+            ga('send', 'event', 'Adblock', 'Yes', {'nonInteraction': 1});
+            console.log("Adblock Is Active");
+ 
+        } else if (typeof _gaq !== 'undefined') {
+ 
+            // Log a non-interactive event in old Google Analytics
+            _gaq.push(['_trackEvent', 'Adblock', 'Yes', undefined, undefined, true]);
+             console.log("Adblock Is Active");
+ 
+        }
+      }
+    }, 2000); // Run ad block detection 2 seconds after page load
+  }; 
+
 $(document).ready(function(){
 	
-	$(".small-toggle").click(function(){
+	// Init Foundation Components
+	$(document).foundation(); 
 	
-		$(".mobile_toggle").toggleClass("show-for-large-up");
 	
-	});
 	
 	if($('.sidepanel').length > 0){
 		
@@ -66,34 +189,34 @@ $(document).ready(function(){
 		$(".logged-in").toggle();
 			
 	}
-  
-	/* Add Double Slash to enable Orbit following section.
-  
-	$(function() {
-		
-		$(".news_1col > div:gt(0)").hide();
-		
-		$(".news_1col .killfloat").remove();
-		$(".news_1col .news_all").remove();
-
-		setInterval(function() { 
-		  $('.news_1col > div:first')
-		    .fadeOut(2000)
-		    .next()
-		    .fadeIn(2000)
-		    .end()
-		    .appendTo('.news_1col');
-		},  10000);
 	
+	/*
+	 * Function Animates the Main News Slider
+	 *
+	 *
+	 */
 	
-		
-	});
+	$(".orbitslider .news_1col > div:gt(0)").hide();
+	$(".orbitslider .news_1col .killfloat").remove();
+	$(".orbitslider .news_1col .news_all").remove();
 	
-	/* */
-	
-	$(document).foundation(); // Init Foundation Components
+	Clock.start();
 	
 	sortNavigation();
 	sortSportsClubs();
+	
+	// DEBUG SCRIPTS
+	
+	reOrderCSSImports();
+	
+	// END DEBUG SCRIPTS
+	
+	document.addEventListener(visibilityChange, handleVisibilityChange, false); // Adds the Visibility Event Listener for the Orbit Slider
+	
+	$(".small-toggle").click(function(){
+	
+		$(".mobile_toggle").toggleClass("show-for-large-up");
+	
+	});
 	
 });

@@ -1,3 +1,67 @@
+/* ====================================================
+	
+				Side Page Navigation
+	
+==================================================== */
+
+.side_nav {
+	
+	// Top Level Navigation List In Sidebar
+	
+	ul.level_1 {
+		
+		list-style: none;
+		
+		margin: 0;
+		padding: 0;
+		
+		li a {
+			
+			font-weight: bold;
+			
+		}
+		
+	}
+	
+	// Child Level Navigation List In Sidebar
+	
+	ul.level_2 {
+	
+		padding-left: 10px;
+	    border-left: 1px solid rgba(0,0,0,0.1);
+	    margin-left: 5px;
+	    list-style: none;
+	
+		li a {
+			
+			font-size: 90%;
+			color: #444;
+			font-style: italic;
+			font-weight: normal;
+		
+		}
+	
+	}
+	
+}
+
+// Highlight the Current Page Link
+
+ul li a.current {
+	
+	font-weight: bold;
+	pointer-events:none;
+	color: #444;
+	
+}
+
+/* ===============================================================
+	
+						
+	
+=============================================================== */
+
+
 .toolbar {
 	
 	background: #002c56;
@@ -45,6 +109,13 @@
 	
 }
 
+.back {
+	
+	padding: 0;
+	background: rgba(0,0,0,0.3);
+	
+}
+
 .center-img {
 	
 	background: url("/assets/site_resources/circle.svg") #f2f2f2 no-repeat center center;
@@ -64,13 +135,13 @@
 	ul {
 		
 		/* Adverts Admin */ 	li:nth-child(1){ display: block; }
-		/* Blog Admin */ 		li:nth-child(2){ display: none; }
-		/* Directory Admin */ 	li:nth-child(3){ display: none; }
-		/* Elections Admin */ 	li:nth-child(4){ display: none; }
-		/* Events Admin */ 		li:nth-child(5){ display: none; }
-		/* Adverts Admin */ 	li:nth-child(6){ display: none; }
-		/* Adverts Admin */ 	li:nth-child(7){ display: none; }
-		/* Adverts Admin */ 	li:nth-child(8){ display: none; }
+		/* Blog Admin */ 		li:nth-child(2){ display: block; }
+		/* Directory Admin */ 	li:nth-child(3){ display: block; }
+		/* Elections Admin */ 	li:nth-child(4){ display: block; }
+		/* Events Admin */ 		li:nth-child(5){ display: block; }
+		/* Adverts Admin */ 	li:nth-child(6){ display: block; }
+		/* Adverts Admin */ 	li:nth-child(7){ display: block; }
+		/* Adverts Admin */ 	li:nth-child(8){ display: block; }
 	
 	}
 	
@@ -134,21 +205,3 @@ nav.master {
 	
 }
 
-/* ====================================================
-	
-				Side Page Navigation
-	
-==================================================== */
-
-.side_nav {
-	
-	ul {
-		
-		list-style: none;
-		
-		margin: 0;
-		padding: 0;
-		
-	}
-	
-}

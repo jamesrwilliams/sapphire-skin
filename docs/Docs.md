@@ -30,3 +30,7 @@ http://peek.usertesting.com/
 With Child Pages - Womens' Rugby
 
 Without - 
+
+Club Logos = login as your club admin (CC or Marketing) then go to Account > (TeamName) Admin Tools > Edit Details > Then Upload then update the Logo.
+
+Specs = png min-width/height 250x250px

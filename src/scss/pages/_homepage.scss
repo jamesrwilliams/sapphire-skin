@@ -1,0 +1,124 @@
+//MSL Homepage CSS Class
+.page_root {
+	
+	.quick-links,
+	.eventlist,
+	.home-news {
+		
+		background: white;
+		border-radius: 3px;
+		overflow: hidden;
+
+		
+		h4 {
+			
+			background: $colour_primary;
+			text-shadow: none;
+			font-size: 1em;
+
+			a {
+				
+				color: white;
+				padding: 10px;
+				padding-left: 15px;
+				display: block;
+				
+			}
+			
+		}
+		
+	}
+	
+	/*
+		
+		Need to set the styles here as this is for a non MSL element
+		
+	*/
+	
+	.quick-links {
+		
+		h4 {
+			
+			color: white;
+			padding: 10px;
+			padding-left: 15px;
+			display: block;
+			
+		}
+		
+		ul {
+			
+			list-style: none;
+			margin: 0;
+			
+			
+			li a {
+				
+				padding: 10px;
+				display: block;
+				font-weight: bold;	
+				
+				-webkit-transition: all 0.5s linear;
+				
+			}
+			
+			li a:hover {
+				
+				border-left: 5px solid $colour_primary;
+				
+			}
+			
+			li:not(:last-child) {
+			
+				border-bottom: 1px solid rgba(0,0,0,0.1);
+			
+			}
+			
+		}
+		
+	}
+	
+	// UpNext Event List Widget Container
+	.eventlist {
+		
+		.event_item {
+			
+			padding: 10px;
+			
+			dt > a:first-of-type {
+				
+				float: left;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				
+			}
+			
+		}
+		
+		// Adds a bottom border to all but the last item
+		.event_item:not(:last-child) {
+			
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			
+		}
+		
+	}
+	
+	.home-news {
+		
+		.news_item {
+			
+			padding: 10px;
+			
+		}
+		
+		// Adds a bottom border to all but the last item
+		.news_item:not(:last-child) {
+			
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			
+		}
+		
+	}
+	
+}
