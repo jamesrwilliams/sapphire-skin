@@ -11,46 +11,90 @@
 	ul.level_1 {
 		
 		list-style: none;
-		
 		margin: 0;
-		padding: 0;
 		
-		li a {
+		a.current:hover { color: white;	}
+		
+		li {
 			
-			font-weight: bold;
+			a {
+			
+				display: block;
+				padding: 5px;
+				font-weight: bold;
+			
+			}
+			
+		}
+		
+		li:not(:last-child){
+			
+			border-bottom: 1px solid #ccc;
 			
 		}
 		
 	}
 	
-	// Child Level Navigation List In Sidebar
-	
 	ul.level_2 {
-	
-		padding-left: 10px;
-	    border-left: 1px solid rgba(0,0,0,0.1);
-	    margin-left: 5px;
-	    list-style: none;
-	
-		li a {
+		
+		background: white;
+		margin: 0;
+		border: 1px solid rgba(0,0,0,0.1);
+		border-bottom: none;
+		list-style: none;
+		
+		a.current:hover { color: #444;	}
+		
+		li {
 			
-			font-size: 90%;
-			color: #444;
-			font-weight: normal;
+			a {
+				
+				padding: 5px;
+				font-size: 90%;
+				color: #444;
+				display:block;
+				font-weight: bold;
+		
+			}
+			
+			.current {
+				
+				background: rgba(23, 66, 131, 0.1);
+				
+			}
 		
 		}
+		
+	}
 	
+	ul.level_3 {
+		
+		border-top: 1px solid rgba(0,0,0,0.1);
+		margin: 0;
+		padding: 0;
+		font-size: 90%;
+		list-style: circle;
+		list-style-position: inside;
+		
 	}
 	
 }
 
 // Highlight the Current Page Link
 
-ul li a.current {
+.msl-itemhassubnav,
+.current {
+			
+	display: block;
+	padding: 5px;
+	background: $colour_primary;
+	color: white;
+			
+}
+
+.current:hover {
 	
-	font-weight: bold;
-	pointer-events:none;
-	color: #444;
+	color: black;
 	
 }
 
