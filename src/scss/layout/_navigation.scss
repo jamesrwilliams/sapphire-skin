@@ -116,12 +116,63 @@
 	
 =============================================================== */
 
+#super_bar .right {
+	
+	/* Targets Super Header search bar on each page */
+		
+	/* Targets Both Search Field and Submit */
+	
+	#ctl00_search_txtSearchStr,
+	#ctl00_search_btnSubmit {
+		
+		display: inline;
+		width: auto;
+		
+	}
+	
+	#ctl00_search_txtSearchStr {}
+	
+	#ctl00_search_btnSubmit {
+		
+		    width: 70px;
+			font-size: 80%;
+			margin-right: 15px;
+			border: none;
+		
+	}
+	
+}
+
+/* Targe the search filed on mobile. */
+@media only screen and (max-width: 40em) {
+	
+	#super_bar .right {
+	
+		padding: 10px;
+	
+	}
+	
+	#ctl00_search_btnSubmit {
+		
+		width: 10%;
+		
+	}
+	
+	#ctl00_search_txtSearchStr {
+		
+		width: 89%;
+		
+	} 
+	
+	
+}
 
 .toolbar {
 	
 	background: #002c56;
 	border-top: 1px solid black;
 	color: white !important;
+	
 	
 }
 
@@ -140,25 +191,9 @@
 	
 	.top-bar-section {
 		
-		ul li {
-			
-			background: none;
-			
-		}
+		ul li { background: none; }
 		
-		li a {font-weight: bold;}
-		
-		.left {
-			
-			
-			
-			li:nth-child(1) a {
-				
-				// background: #F39; // Elections Pink
-				
-			}
-			
-		}
+		li a {font-weight: bold; }
 		
 	}
 	
@@ -212,8 +247,6 @@ nav.master {
 	background: -o-linear-gradient(top,  #004990 1%,#00bde5 53%,#f7f7f7 100%);
 	background: -ms-linear-gradient(top,  #004990 1%,#00bde5 53%,#f7f7f7 100%);
 	background: linear-gradient(to bottom,  #004990 1%,#00bde5 53%,#f7f7f7 100%);
-	
-    padding-top: 15px;
 	
 	#core {
 		

@@ -177,8 +177,6 @@ $(document).ready(function(){
 	// Init Foundation Components
 	$(document).foundation(); 
 	
-	
-	
 	if($('.sidepanel').length > 0){
 		
 		$(".logged-out").toggle();
