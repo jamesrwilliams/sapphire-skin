@@ -107,16 +107,58 @@
 .sticky {
 	
 	padding: 0;
+	@include border-radius(3px);
 	
 }
 
 /* ===============================================================
 	
-						
+	Dropdowns			
 	
 =============================================================== */
 
+.dropdown {
+	
+	h5 {
+		
+		font-size: 1em;
+		
+	}
+	
+	.back {
+		
+	
+		
+	}
+	
+}
+
+.expanded .name {
+	
+	background: $colour_accent;
+	
+}
+
+.top-bar.expanded .toggle-topbar a {
+	
+	color: white;
+	
+}
+
+.top-bar.expanded .toggle-topbar a span::after {
+	
+	box-shadow: 0 0 0 1px #fff,0 7px 0 1px #fff,0 14px 0 1px #fff;
+	
+}
+
+
 #super_bar .right {
+	
+	input.button:hover {
+		
+		background-color: rgba(0,0,0,0.4);
+		
+	}
 	
 	/* Targets Super Header search bar on each page */
 		

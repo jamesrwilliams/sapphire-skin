@@ -32,16 +32,64 @@
 .side_nav {
 	
 	border-right: 1px solid #ddd;
-	// Club List Page
+	
+	.mslwidget {
+		
+		position: relative;
+		margin-bottom: 10px;
+		
+	}
+	
+	.msl_email,
+	.msl_web {
+		
+		display: block;
+		background: $colour_primary;
+		text-indent: -9999px;
+		margin: 10px 0;
+	    padding: 5px 0;
+	    
+	    @include border-radius(3px);
+		
+	}
+	
+	.msl_email:after,
+	.msl_web:after {
+		
+		display: block;
+		
+		color: white;
+		text-indent: 0;
+		font-weight: bold;
+		
+		padding: 10px 0;
+		
+		position: absolute;
+		top:0;
+		
+		width: 100%;
+		text-align: center;
+		
+	}
+	
+	.msl_email:after:hover,
+	.msl_web:after:hover {
+		
+		background-color: $colour_accent;
+		
+	}
+	
+	.msl_email:after 	{ content: "Email Club"; }
+	.msl_web:after 		{ content: "Club Website"; }
 }
+
+
 
 /* ===============================================================
 	
 							Club List			
 	
 =============================================================== */
-
-
 
 .club_list {
 	

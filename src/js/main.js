@@ -7,8 +7,7 @@
  * @author 		James Williams (@James_RWilliams)
  * @copyright 	Copyright (c) 05/07/2015
  *
- */
- 
+ */	
 
 /**
  *	Handle The Visibility Change
@@ -88,6 +87,30 @@ var Clock = {
 	}
 
 };
+
+/**
+ *	Konami Fun
+ * 
+ */
+ 
+var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+
+$(document).keydown(function(e) {
+
+  kkeys.push( e.keyCode );
+
+  if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+
+    $(document).unbind('keydown',arguments.callee);
+    
+    // do something awesome
+    $("body").addClass("konami");
+    
+    $("body").prepend('<iframe id="somethingsomethingdarkside" width="420" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>');
+  
+  }
+
+});
 
 /**
  *	Sort Sorts Clubs
@@ -172,19 +195,23 @@ function reOrderCSSImports(){
     }, 2000); // Run ad block detection 2 seconds after page load
   }; 
 
+
+
 $(document).ready(function(){
 	
 	// Init Foundation Components
 	$(document).foundation(); 
 	
-	if($('.sidepanel').length > 0){
+	if($('.sidepanel.controlpanel').length > 0){
 		
-		$(".logged-out").toggle();
+		$(".logged-out").hide();
+		console.log("SAPPHIRE - Logged In");
 		
 		
 	}else{
 		
-		$(".logged-in").toggle();
+		$(".logged-in").hide();
+		console.log("SAPPHIRE - Logged Out");
 			
 	}
 	
@@ -202,6 +229,10 @@ $(document).ready(function(){
 	
 	sortNavigation();
 	sortSportsClubs();
+	
+	console.log("fired");
+	
+	$("iframe[src^='https://player.vimeo.com'], iframe[src^='https://www.youtube-nocookie.com'], iframe[src^='//www.youtube.com'], object, embed").wrap("<div class='flex-video'></div>");
 	
 	// DEBUG SCRIPTS
 	

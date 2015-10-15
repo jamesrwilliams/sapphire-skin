@@ -141,8 +141,33 @@ input[value="Add to Basket"]{
 	
 =============================================================== */
 
+input.button {
+	
+	background-image: none;
+	
+}
 
+#somethingsomethingdarkside {
+	
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	
+}
 
+#somethingsomethingdarkside:after {
+	
+	position: fixed;
+	bottom: 50px;
+	width: 100%;
+	content: "Never gonna give you up";
+	display: block;
+	background: white;
+	z-index: 10000000;
+	
+}
 
 // Removes Icons
 .msl_email,
@@ -153,3 +178,4 @@ input[value="Add to Basket"]{
 	padding: 0px;
 	
 }
+
