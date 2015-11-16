@@ -1,7 +1,10 @@
 /* Sapphire because its blue and shiny */
-/* Number of !importants as MSL is an ass = 10 */
+/* Number of !importants as MSL is an ass = 24 */
 
-* { -webkit-font-smoothing: antialiased; }
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
 
 @import "utilities/colour";
 @import "utilities/functions";

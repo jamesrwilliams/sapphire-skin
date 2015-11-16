@@ -9,7 +9,7 @@
 	// Top Level Navigation List In Sidebar
 	
 	ul.level_1 {
-		
+			
 		list-style: none;
 		margin: 0;
 		
@@ -20,14 +20,31 @@
 			a {
 			
 				display: block;
-				padding: 5px;
+				padding: 5px;	
 				font-weight: bold;
 			
 			}
 			
+			.msl-itemhassubnav,
+			.current {
+						
+				display: block;
+				background: $colour_primary;
+				color: white;
+						
+			}
+			
+			.msl-itemhassubnav {
+				
+				// Now isn't this a more sensible way to do border-raidus.
+				@include border-radius(3px 3px 0px 0px);
+				padding-left: 10px;
+				
+			}
+			
 		}
 		
-		li:not(:last-child){
+		> li:not(:last-child){
 			
 			border-bottom: 1px solid #ccc;
 			
@@ -40,6 +57,7 @@
 		background: white;
 		margin: 0;
 		border: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 0;
 		border-bottom: none;
 		list-style: none;
 		
@@ -53,7 +71,9 @@
 				font-size: 90%;
 				color: #444;
 				display:block;
-				font-weight: bold;
+				// font-weight: bold;
+		
+				border-bottom: 1px solid #ccc;
 		
 			}
 			
@@ -64,6 +84,8 @@
 			}
 		
 		}
+		
+		border-bottom:0;
 		
 	}
 	
@@ -82,15 +104,7 @@
 
 // Highlight the Current Page Link
 
-.msl-itemhassubnav,
-.current {
-			
-	display: block;
-	padding: 5px;
-	background: $colour_primary;
-	color: white;
-			
-}
+
 
 .current:hover {
 	
