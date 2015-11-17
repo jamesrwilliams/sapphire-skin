@@ -240,6 +240,17 @@ $(document).ready(function(){
 	
 	// END DEBUG SCRIPTS
 	
+	if ($('#skin_Sapphire').length > 0) {
+        
+    	$(".msl-product-image").each(function() {  
+
+            var imgsrc = this.src;         
+            $(this).attr("src", getPathFromUrl(imgsrc));
+            $(this).attr('style', '');
+
+        });  
+	}
+	
 	document.addEventListener(visibilityChange, handleVisibilityChange, false); // Adds the Visibility Event Listener for the Orbit Slider
 	
 	$(".small-toggle").click(function(){
