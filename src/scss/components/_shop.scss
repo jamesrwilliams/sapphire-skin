@@ -1,0 +1,238 @@
+// Shop SCSS File
+
+#skin_Sapphire.page_shop {
+	
+	ul.catalogue_productlist {
+		
+		margin: 0;
+		border: 1px solid #ccc;
+		
+		img {
+			
+			width: auto;
+			height: auto;
+			
+		}
+		
+		li {
+			
+			background: white;
+			width: 25%;
+			height: auto;
+			
+			margin: 0;
+			padding: 0;
+			
+			
+			
+			a img {
+				
+				
+				
+			}
+			
+		}
+		
+		li:not(:nth-child(4n)){
+			
+			border-right: 1px solid #ccc;
+			
+		}
+		
+	}
+	
+	#product {
+		
+		h1 {
+			
+			background: $colour_primary_light;
+			color: white;
+			text-align: center;
+			text-shadow: none;
+			margin-bottom: 0;
+			font-size: 1em;
+			padding: 10px;
+			
+			
+		}
+		
+		.product_images {
+			
+			margin: 0;
+			padding: 0;
+			background: none;
+			
+			#image_main {
+				
+				text-align: inherit;
+				margin: 0;
+				
+				img {
+					
+					border: none;
+					background: none;
+					padding: 0;
+					
+				}
+				
+			}
+			
+			
+		}
+		
+	}
+	
+}
+
+/* ===============================================================
+	
+			Product Page			
+	
+=============================================================== */
+
+#ctl00_Main_ProductCtl1_btnAdd {
+	
+	@extend .blue-button;
+	
+}
+
+#ctl00_Main_ProductCtl1_btnSelectOption {
+	
+	@extend .info-button;
+	
+}
+
+/* ===============================================================
+	
+			Basket Page					
+	
+=============================================================== */
+
+#basket {
+	 
+	+ h3 { display: none; }
+	
+	a.basket,
+	a.checkout {
+		
+		width: 50%;
+		
+	}
+	
+	
+	a.basket {
+		
+		background: blue;
+		
+	}
+	
+	a.checkout {
+		
+		background: yellow;
+		
+	}
+	
+}
+
+#ctl00_Main_btnProceed {
+	
+	@extend .blue-button;
+	
+}
+
+/* ===============================================================
+	
+			Checkout Page			
+	
+=============================================================== */
+
+#reviewbasket {
+	
+	padding: 0 !important;
+	
+}
+
+.checkoutpage {
+	
+	padding: 0;
+	
+	table.msl_table {
+		
+		border: 0 !important;
+		background: none;
+		
+	}
+	
+	table.msl_table th {
+		
+		background: none;
+		border: 0;
+		color: $colour_primary;
+		width: 100% !important;	
+	}
+	
+	table.msl_table td {
+		
+		border: 0;
+		
+	}
+	
+	/* Hide The Row Total */
+	
+	table.msl_table th:nth-child(3),
+	table.msl_table td:nth-child(3),
+	table.msl_table th:nth-child(5),
+	table.msl_table td:nth-child(5) {
+		
+		display: none;
+		
+	}
+	
+}
+
+.checkoutpage .msl_table tr.footer td.total {
+	
+	border-bottom: 0 !important;
+	border-top: 0 !important;
+	
+}
+
+.total {
+	
+	border-top: 0;
+	border-bottom: 0;
+	
+	font-weight: bold;
+	
+}
+
+.total:before {
+	
+	position: absolute;
+    content: "Sub-total: ";
+    display: block;
+    right: 110px;
+    height: 10px;
+	
+}
+
+#ctl00_Main_btnPay {
+	
+	@extend .blue-button;
+	
+}
+
+.saved-card-details label {
+	
+	width: auto;
+	display: inherit;
+	
+}
+
+#pay .button {
+	
+	// Values from Foundation Buttons
+	padding: 1rem 2rem 1.0625rem 2rem !important;
+	font-size: 1rem !important;
+	
+}

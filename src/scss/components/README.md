@@ -1,6 +1,8 @@
-# MSL Widget Status List
+# Sapphire-Skin > SCSS > Components
 
-## General
+## MSL Widget Status List
+
+### General
 
 1. [X] News
 2. [ ] Tag Cloud
@@ -19,7 +21,7 @@
 15. [ ] Forums
 16. [ ] Product Catalogue
 
-## User
+### User
 
 1. [ ] Personal Calendar
 2. [ ] Personal Forums
@@ -37,7 +39,7 @@
 14. [ ] Medical Information
 15. [ ] Voter Popup
 
-## Organisation
+### Organisation
 
 1. [ ] Join Organisation
 2. [ ] Products
@@ -67,7 +69,7 @@
 26. [ ] Logo
 27. [ ] Inline Grouping Property
 
-## Site
+### Site
 
 1. [ ] Event Brand Tickets
 2. [ ] Product

@@ -1,11 +1,25 @@
+body {
+	
+	background-color: $colour_primary_dark; // Makes the overscroll background colour match the theme
+	font-size: 16px;
+	
+}
+
+#skin_Sapphire { background: #f6f6f6; } // Grey background over the blue theme colour.
+
+img {
+	
+	max-width: 100%;
+	height: auto;
+	
+}
+
 /*
- *
  * Resets the System Buttons to Foundation Styles
  *
  *
  * Standard Buttons = @extend .root_button;
  * Small Buttons	= @extend .root_button_small;
- *
  *
  *
  */
@@ -14,6 +28,7 @@
 	
 	-webkit-appearance: none;
 	-moz-appearance: none;
+	
 	border-radius: 0;
 	border-style: solid;
 	border-width: 0;
@@ -141,10 +156,12 @@ input[value="Add to Basket"]{
 	
 =============================================================== */
 
-input.button {
-	
-	background-image: none;
-	
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='date'],
+textarea {
+  font-size: 16px;
 }
 
 #somethingsomethingdarkside {
@@ -169,7 +186,7 @@ input.button {
 	
 }
 
-// Removes Icons
+// Removes Background Images & Padding
 .msl_email,
 .msl_web, 
 .collapse {
@@ -178,4 +195,8 @@ input.button {
 	padding: 0px;
 	
 }
+
+// Removes Button Images
+input.button,
+.expand {background-image: none;}
 

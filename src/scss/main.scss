@@ -1,102 +1,38 @@
 /* Sapphire because its blue and shiny */
-/* Number of !importants as MSL is an ass = 24 */
 
-html, html a {
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-}
+@import "settings/colour";
+@import "settings/functions";
+@import "settings/type";
+@import "settings/reset";
 
-@import "utilities/colour";
-@import "utilities/functions";
-@import "utilities/type";
-@import "utilities/reset";
-
-@import "orbitslider";
-@import "notification";
-@import "calender";
-@import "comments";
-
-@import "layout/admin/admin_page_content";
-@import "layout/admin/controlpanel";
-@import "layout/admin/login";
-@import "layout/admin/page_tools";
-@import "layout/admin/toolbar";
-
-@import "modules/modules";
-
-@import "widgets/widget_panel";
-
+@import "layout/admin";
 @import "layout/navigation";
 @import "layout/footer";
 
+@import "components/adverts";
+@import "components/calender";
+@import "components/comments";
+@import "components/news";
+@import "components/notifications";
+@import "components/orbitslider"; // This needs renaming as it isn't technically a foundaiton Orbit Slider!
+@import "components/shop";
+@import "components/surveys";
+
+@import "pages/login";
 @import "pages/homepage";
 @import "pages/eventcalendar";
 @import "pages/societies";
 @import "pages/clubs";
 @import "pages/news";
 
-body {
-	
-	background-color: #003665;
-	font-size: 16px;
-	
-}
+.vp_hint { display: block; } // Whats this? 
 
-#skin_Sapphire {
-	
-	background: #f6f6f6;
-	
-}
-
-// Whats this? 
-.vp_hint {
-	
-	display: none;
-	
-}
-
-a {
-	
-	/* Force A links to stay within container. From: https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ (05/11/15) */
-	
-	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
-
-	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
-	
-}
-
-img {
-	
-	max-width: 100%;
-	height: auto;
-	
-}
-
-.SSpanel {
+.SSpanel { // Whats this?
 	
 	border-radius: 5px;
 	overflow: hidden;
 	
 }
 
-input[type='text'],
-input[type='number'],
-textarea {
-  font-size: 16px;
-}
 
-// Removes Button Images
-input.button,
-.expand {background-image: none;}
+
