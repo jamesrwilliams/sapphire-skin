@@ -1,24 +1,66 @@
 #basket {
-	 
-	+ h3 { display: none; }
+	
+	background: #333;
+	padding: 0.9375rem;
+	width: 400px;
+	max-width: 100%;
+	color: white;
+	
+	> h3 { display: none; }
+	
+	a {
+		
+		display: inline-block;
+		
+	}
 	
 	a.basket,
 	a.checkout {
 		
-		width: 50%;
+		background-image: none;
+		line-height: 1em;
 		
 	}
 	
-	
-	a.basket {
+	a.remove {
 		
-		background: blue;
+		background: none;
+		color:red;
 		
 	}
 	
-	a.checkout {
+	a.basket {		@extend .info-button;	}
+	a.checkout { 	@extend .green-button; 	}
+	
+	dd.price,
+	dd.qty {
 		
-		background: yellow;
+		color: white;
+		
+	}
+	
+	dd.qty {
+		
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+		
+	}
+	
+	dl {
+		
+		margin: 0;
+		border-bottom: none;
+		
+	}
+	
+	// Product Title
+	
+	dt > a {
+		
+		margin: 0;
+		padding: 0;
+		background: none;
+		color: white;
+		line-height: 1em;
 		
 	}
 	

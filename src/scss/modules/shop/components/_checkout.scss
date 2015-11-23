@@ -1,12 +1,19 @@
 #reviewbasket {
 	
-	padding: 0 !important;
+	// padding: 0 !important;
 	
 }
 
 .checkoutpage {
 	
 	padding: 0;
+	
+	h2,
+	h3 {
+		
+		margin: inherit;
+		
+	}
 	
 	table.msl_table {
 		
@@ -71,6 +78,22 @@
 #ctl00_Main_btnPay {
 	
 	@extend .blue-button;
+	
+}
+
+/* Collections Page */
+
+.page_fulfilment {
+	
+	.vpFormSubmit {
+		
+		margin: 0;
+		
+		#ctl00_Main_btnSelectCollection { @extend .green-button; }
+		
+	}
+	
+	
 	
 }
 

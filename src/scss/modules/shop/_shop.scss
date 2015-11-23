@@ -1,8 +1,7 @@
 // Shop SCSS Import File
 
-#skin_Sapphire.page_shop {
-	
-	border-top: 10px solid red;
+#skin_Sapphire.page_shop,
+#skin_Sapphire.page_store {
 	
 	ul.catalogue_productlist {
 		
@@ -47,3 +46,46 @@
 @import "components/basket";
 @import "components/product";
 @import "components/checkout";
+
+// Medium ?
+@media only screen and (min-width:40.0625em) and (max-width:64em){
+	
+	#skin_Sapphire.page_shop,
+	#skin_Sapphire.page_store {
+	
+		border-top: 5px solid red;
+		
+		ul.catalogue_productlist {
+			
+			li {
+				
+				width: 50%;
+				
+			}
+			
+		}
+	
+	}
+	
+}
+
+@media only screen and (max-width: 40em){
+	
+	#skin_Sapphire.page_shop,
+	#skin_Sapphire.page_store {
+	
+		border-top: 5px solid orange;
+		
+		ul.catalogue_productlist {
+			
+			li {
+				
+				width: 100%;
+				
+			}
+			
+		}
+	
+	}
+	
+}

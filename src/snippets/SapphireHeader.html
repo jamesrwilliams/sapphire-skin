@@ -1,12 +1,19 @@
 <div class="contain-to-grid">
 
 	<nav class="top-bar" id="super_bar" data-topbar role="navigation" data-options="is_hover: false, mobile_show_parent_link: true">
+		<ul class="title-area has-dropdown">
+		
+					<li class="name"></li>
+		
+					<li class="toggle-topbar menu-icon"><a href="#"><span>More</span></a></li>
+		
+				</ul>
 
 		<section class="top-bar-section">
 	
 			<ul class="right">
 				
-				<li><MSL:Search /></li>
+				<li class="has-form"><div class="row collapse"><MSL:Search /></div></li>
 				
 			</ul>
 	
@@ -48,6 +55,18 @@
 						
 					</ul>
 	
+				</li>
+				
+				<li class="has-dropdown not-click logged-in basket_dropdown">
+				
+					<a href="#">Basket</a>
+					
+					<ul class="dropdown">
+						
+						<MSL:Basket>
+						
+					</ul>
+				
 				</li>
 	
 			</ul>
@@ -154,17 +173,7 @@
 						
 						<li class="divider"></li>
 						
-						<li class="has-dropdown">
-						
-							<a href="/shop">Shop</a>
-						
-							<ul class="dropdown">
-								
-								
-								
-							</ul>
-							
-						</li>
+						<li><a href="/shop">Shop</a></li>
 						
 						<li class="divider"></li>
 						

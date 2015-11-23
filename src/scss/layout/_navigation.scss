@@ -71,8 +71,6 @@
 				font-size: 90%;
 				color: #444;
 				display:block;
-				// font-weight: bold;
-		
 				border-bottom: 1px solid #ccc;
 		
 			}
@@ -183,7 +181,8 @@
 		
 		display: inline;
 		width: auto;
-		
+		vertical-align: middle;
+	
 	}
 	
 	#ctl00_search_txtSearchStr {}
@@ -199,8 +198,10 @@
 	
 }
 
-/* Targe the search filed on mobile. */
+/* Target the search filed on mobile. */
 @media only screen and (max-width: 40em) {
+	
+	/*
 	
 	#super_bar .right {
 	
@@ -220,6 +221,7 @@
 		
 	} 
 	
+	*/
 	
 }
 

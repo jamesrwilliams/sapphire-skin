@@ -7,7 +7,24 @@
  * @author 		James Williams (@James_RWilliams)
  * @copyright 	Copyright (c) 05/07/2015
  *
- */	
+ */
+ 
+/**
+ *	Basket Highlight Logic
+ * 
+ */
+ 
+function basketCount(){
+	
+	var productcount = $('#ctl00_basket_pnlBasket dt').length;
+	
+	if( productcount > 0 ){
+		
+		$('.basket_dropdown > a').append(" (" + productcount + ")");
+		
+	}
+	
+}
 
 /**
  *	Handle The Visibility Change
@@ -199,26 +216,23 @@ function reOrderCSSImports(){
 
 $(document).ready(function(){
 	
-	// Init Foundation Components
-	$(document).foundation(); 
+	console.time("JS");
 	
 	if($('.sidepanel.controlpanel').length > 0){
 		
 		$(".logged-out").hide();
-		console.log("SAPPHIRE - Logged In");
-		
-		
+	
 	}else{
 		
 		$(".logged-in").hide();
-		console.log("SAPPHIRE - Logged Out");
-			
+	
 	}
 	
+
+	$(document).foundation(); 	// Init Foundation Components
+	
 	/*
-	 * Function Animates the Main News Slider
-	 *
-	 *
+	 * 	Function Animates the Main News Slider
 	 */
 	
 	$(".orbitslider .news_1col > div:gt(0)").hide();
@@ -229,8 +243,7 @@ $(document).ready(function(){
 	
 	sortNavigation();
 	sortSportsClubs();
-	
-	console.log("fired");
+	basketCount();
 	
 	$("iframe[src^='https://player.vimeo.com'], iframe[src^='https://www.youtube-nocookie.com'], iframe[src^='//www.youtube.com'], object, embed").wrap("<div class='flex-video'></div>");
 	
@@ -251,6 +264,9 @@ $(document).ready(function(){
         });  
 	}
 	
+
+
+	
 	document.addEventListener(visibilityChange, handleVisibilityChange, false); // Adds the Visibility Event Listener for the Orbit Slider
 	
 	$(".small-toggle").click(function(){
@@ -258,5 +274,7 @@ $(document).ready(function(){
 		$(".mobile_toggle").toggleClass("show-for-large-up");
 	
 	});
+	
+	console.timeEnd("JS");
 	
 });
