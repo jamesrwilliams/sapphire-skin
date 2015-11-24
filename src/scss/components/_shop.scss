@@ -43,6 +43,13 @@
 	
 	#product {
 		
+		#image_thumb img {
+			
+			border: none;
+			background: none;
+			
+		}
+		
 		h1 {
 			
 			background: $colour_primary_light;
@@ -53,6 +60,43 @@
 			font-size: 1em;
 			padding: 10px;
 			
+			
+		}
+		
+		.product_box {
+			
+			background: white;
+			border: 1px solid #ddd;
+			
+			@include border-radius(5px);
+			
+			h2 {
+				
+				margin: 0;
+				background: none;
+				border-bottom: 0;
+				
+			}
+			
+		}
+		
+		.product_box_product_options {
+			
+			h2 { font-size: 1em; }
+			
+			table {
+				
+				background: none;
+				border: 0;
+				margin-bottom: 0;
+				
+				select {
+					
+					margin: 0; // Removes Lineheigh issue
+					
+				}
+								
+			}
 			
 		}
 		
@@ -109,26 +153,68 @@
 =============================================================== */
 
 #basket {
-	 
-	+ h3 { display: none; }
+	
+	background: #333;
+	padding: 0.9375rem;
+	width: 400px;
+	max-width: 100%;
+	color: white;
+	
+	> h3 { display: none; }
+	
+	a {
+		
+		display: inline-block;
+		
+	}
 	
 	a.basket,
 	a.checkout {
 		
-		width: 50%;
+		background-image: none;
+		line-height: 1em;
 		
 	}
 	
-	
-	a.basket {
+	a.remove {
 		
-		background: blue;
+		background: none;
+		color:red;
 		
 	}
 	
-	a.checkout {
+	a.basket {		@extend .info-button;	}
+	a.checkout { 	@extend .green-button; 	}
+	
+	dd.price,
+	dd.qty {
 		
-		background: yellow;
+		color: white;
+		
+	}
+	
+	dd.qty {
+		
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+		
+	}
+	
+	dl {
+		
+		margin: 0;
+		border-bottom: none;
+		
+	}
+	
+	// Product Title
+	
+	dt > a {
+		
+		margin: 0;
+		padding: 0;
+		background: none;
+		color: white;
+		line-height: 1em;
 		
 	}
 	

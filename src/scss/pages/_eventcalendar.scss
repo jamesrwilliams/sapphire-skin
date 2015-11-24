@@ -105,8 +105,78 @@
 		border-radius: 5px;
 		overflow: hidden;
 		margin-left: 10px;
-		padding: 10px;
+		
+		.eventlist_day h4 {
+			
+			padding: 10px;
+		    background: #004a8b;
+		    text-shadow: none;
+		    color: white;
+		    font-size: 1em;
+			
+		}
+		
+		.event_item {
+			
+			padding: 10px;
+			border-bottom: 1px solid #eee;
+			
+			.msl_event_name {
+				
+				font-size: 1.1em;
+				
+			}
+			
+			.msl_event_time,
+			.msl_event_location {
+				
+				margin: 0;
+				display: inline-block;
+				font-weight: bold;
+				color: #444;
+				
+			}
+			
+			.msl_event_time {}
+			
+			.msl_event_location {}
+			
+		} 
+		
+		.event_item.itemEven {
+			
+			
+			
+		}
+		
+		// Event Type Tags
+		.msl_event_types {
+			 			
+			color: white; // Hides the divider icons
+			
+			a {
+				
+				@extend .label;
+				
+			}
+			
+		}
 		
 	}
 	
 }
+
+.event_tickets {
+	
+	@extend .panel;
+	
+	#ctl00_Main_ctl09_rptTickets_ctl00_btnAddTicket {
+	
+		@extend .blue-button;
+		
+		display: block;
+		
+	}
+	
+}
+

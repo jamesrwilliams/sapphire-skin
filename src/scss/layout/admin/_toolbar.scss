@@ -1,71 +1,11 @@
-/*
-
-header.admin {
+div#msl_toolbar ul li a#ctl00_ctl00_Main_AdminPageContent_lnkSiteDesign {
 	
-	background: #002c56;
-	border-bottom: 1px solid rgba(255,255,255,0.2);
-	display: none;
-	
-	#msl_admin {
-		
-		h3 { display: none; }
-		
-		.msl_admin {
-			
-			padding: 0;
-			background: 0;
-			
-		}
-		
-		li {
-			
-			border: 0;
-			
-		}
-		
-		#ulAdmin {
-			
-			li {
-				
-				width: 25%;
-				float: left;
-				margin: 0px;
-				padding: 0;
-				
-				a {
-				 
-				color: white;
-				
-				text-shadow: 0 0.5px 0 #333;
-				
-				}
-				
-			}
-			
-		}
-		
-		#ulAdmin:after {
-			
-			content: "";
-			display: block;
-			clear: both;
-			
-		}
-		
-	}
-	
-}
-
-.msl_toolbarbutton_firstitem {
-	
+	padding-left: inherit;
+	border: none;
+	line-height: inherit;
 	height: auto;
+	padding: inherit;
 	
-}
-
-*/
-
-a#ctl00_ctl00_Main_AdminPageContent_lnkSiteDesign {
-	
-	@extend .green-button;
+	@extend .green-button;	
 	
 }
