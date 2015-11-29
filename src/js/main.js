@@ -1,13 +1,14 @@
 /*
  * Core Sapphire Javascript File
  * 
- * @version		0.1
- * @package		com.jamesrwilliams.yourstudentsunion
+ * @version		0.9
  * @description	Core Site JS file for UGSU		
  * @author 		James Williams (@James_RWilliams)
- * @copyright 	Copyright (c) 05/07/2015
+ * @copyright 	Copyright (c) 29/11/2015
  *
  */
+ 
+ 
  
 /**
  *	Basket Highlight Logic
@@ -46,7 +47,10 @@ if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and 
   visibilityChange = "webkitvisibilitychange";
 }
 
-
+/**
+ *	
+ * 
+ */		
 
 function handleVisibilityChange() {
   if (document[hidden]) {
@@ -212,11 +216,32 @@ function reOrderCSSImports(){
     }, 2000); // Run ad block detection 2 seconds after page load
   }; 
 
+function getTimeRemaining(endtime){
+	  var t = Date.parse(endtime) - Date.parse(new Date());
+	  var seconds = Math.floor( (t/1000) % 60 );
+	  var minutes = Math.floor( (t/1000/60) % 60 );
+	  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+	  var days = Math.floor( t/(1000*60*60*24) );
+	  
+	  var string = "Only " + days + " days to go until the new SU website is launched!";
+	  
+	  return string 
+	
+	}
 
+/**
+ *	
+ * 
+ */		
 
 $(document).ready(function(){
 	
-	console.time("JS");
+	console.time("JS"); // Start a Debug Timer for the execute time of all the JS.
+	
+	/*  Functions that apply to all site pages */
+	
+	
+	$(document).foundation(); // Init Foundation Components
 	
 	if($('.sidepanel.controlpanel').length > 0){
 		
@@ -228,30 +253,36 @@ $(document).ready(function(){
 	
 	}
 	
-
-	$(document).foundation(); 	// Init Foundation Components
+	var deadline = '2016-01-11';
+			
+	console.log(getTimeRemaining(deadline));
+			
 	
-	/*
-	 * 	Function Animates the Main News Slider
-	 */
-	
-	$(".orbitslider .news_1col > div:gt(0)").hide();
-	$(".orbitslider .news_1col .killfloat").remove();
-	$(".orbitslider .news_1col .news_all").remove();
-	
-	Clock.start();
 	
 	sortNavigation();
 	sortSportsClubs();
 	basketCount();
 	
+	// Adds the Visibility Event Listener for the Orbit Slider
+	document.addEventListener(visibilityChange, handleVisibilityChange, false); 
+	
 	$("iframe[src^='https://player.vimeo.com'], iframe[src^='https://www.youtube-nocookie.com'], iframe[src^='//www.youtube.com'], object, embed").wrap("<div class='flex-video'></div>");
 	
-	// DEBUG SCRIPTS
+	/* -----------------------------
 	
-	reOrderCSSImports();
+			Page Conditional JS
 	
-	// END DEBUG SCRIPTS
+	----------------------------- */
+	
+	if($('#skin_Sapphire.page_root').length > 0){
+		
+		$(".orbitslider .news_1col > div:gt(0)").hide();
+		$(".orbitslider .news_1col .killfloat").remove();
+		$(".orbitslider .news_1col .news_all").remove();
+		
+		Clock.start();
+		
+	}
 	
 	if ($('#skin_Sapphire').length > 0) {
         
@@ -264,16 +295,104 @@ $(document).ready(function(){
         });  
 	}
 	
-
-
+	if($('#skin_Sapphire.page_whatson ').length > 0){
+		
+		console.log("Whats on Page");
+		
+		var tags = [];
+		var active_tags = [];
+			
+		$(".event_item").each(function(event_index){
+			
+			var tagString = "";
+			
+			$(this).find(".msl_event_types a").each(function(types_index){
+				
+				var value = $( this ).text();
+				
+				tagString = tagString + value + ", ";
+				
+				if($.inArray(value, tags) === -1){ tags.push(value); }
+				
+			});
+			
+		});
+		
+		// For each item in the Tag array add it as a searchable tag in the cloud.
+		$.each(tags, function( index, value ) { $(".search_options ul").append("<li>" + value + "</li>"); });
+		
+		$(".search_options li").click(function(){
+			
+			if($(this).hasClass("active")){
+				
+				// Remove from Array
+				
+				var remove_value = $(this).text();
+				
+				$(this).removeClass("active");
+				
+				active_tags = $.grep(active_tags, function(value){
+				
+					return value != remove_value;
+					
+				});
+				
+			}else{
+				
+				// Add to Array
+				
+				$(this).addClass("active");
+				
+				var add_value = $(this).text();
+				
+				if($.inArray(add_value, active_tags) === -1){ active_tags.push(add_value); }
+				
+			}
+			
+			if($(".search_options li").hasClass("active")){
+				
+				$(".event_item").hide();
+				
+				// Show events that match current_tags array
+				
+				$(".event_item").each(function(event_index){
+					
+					var tag_match = false;
+					
+					$(this).find(".msl_event_types a").each(function(){
+				
+						if($.inArray($( this ).text(), active_tags) > -1){ tag_match = true; }
+				
+					});
+					
+					// If there is a tag match show the event
+					if(tag_match === true){ $(this).show(); }
+					
+				});
+				
+			} else{
+				
+				$(".event_item").show();
+				
+			}
+			
+		});
+		
+	}
 	
-	document.addEventListener(visibilityChange, handleVisibilityChange, false); // Adds the Visibility Event Listener for the Orbit Slider
+	$(".small-toggle").click(function(){ $(".mobile_toggle").toggleClass("show-for-large-up"); });
 	
-	$(".small-toggle").click(function(){
+	// DEBUG SCRIPTS
 	
-		$(".mobile_toggle").toggleClass("show-for-large-up");
+	//* Testing
 	
-	});
+	reOrderCSSImports();
+	
+	/* */
+	
+	// END DEBUG SCRIPTS
+	
+	/* ----------------------------- */
 	
 	console.timeEnd("JS");
 	

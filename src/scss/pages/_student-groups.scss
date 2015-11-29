@@ -20,6 +20,7 @@
 		
 		.product-price {
 			
+			font-weight: bold;
 			display: block;
 			margin: 10px 0;
 			
@@ -41,20 +42,23 @@
 	}
 	
 	.msl_email,
-	.msl_web {
+	.msl_web,
+	.msl_twitter,
+	.msl_facebook {
 		
 		display: block;
-		background: $colour_primary;
+		background: $colour_primary_light;
+		border-left: 5px solid $colour_accent;
 		text-indent: -9999px;
 		margin: 10px 0;
 	    padding: 5px 0;
-	    
-	    @include border-radius(3px);
 		
 	}
 	
 	.msl_email:after,
-	.msl_web:after {
+	.msl_web:after,
+	.msl_twitter:after,
+	.msl_facebook:after {
 		
 		display: block;
 		
@@ -62,25 +66,19 @@
 		text-indent: 0;
 		font-weight: bold;
 		
-		padding: 5px 0;
+		padding: 5px;
 		
 		position: absolute;
 		top:0;
 		
 		width: 100%;
-		text-align: center;
 		
 	}
 	
-	.msl_email:after:hover,
-	.msl_web:after:hover {
-		
-		background-color: $colour_accent;
-		
-	}
-	
-	.msl_email:after 	{ content: "Email Club"; }
-	.msl_web:after 		{ content: "Club Website"; }
+	.msl_email:after 	{ content: "Email";   }
+	.msl_web:after 		{ content: "Website"; }
+	.msl_twitter:after	{ content: "Twitter"; }
+	.msl_facebook:after	{ content: "Facebook"; }
 }
 
 
