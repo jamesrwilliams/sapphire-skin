@@ -71,3 +71,28 @@
 	}
 	
 }
+
+/* SHAME LAZY SCSS */
+
+#skin_Sapphire.page_elections {
+	
+	nav.master {
+		
+		background: #FF3399;
+		
+	}
+	
+	.top-bar-section>ul>.divider, .top-bar-section>ul>[role="separator"] {
+		
+		border-right: solid 1px rgba(0,0,0,0.3);
+		
+	}
+	
+	.contain-to-grid, .top-bar,
+	.top-bar-section li:not(.has-form) a:not(.button) {
+		
+		background: #801a4d;
+		
+	}
+	
+}

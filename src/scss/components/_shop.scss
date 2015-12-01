@@ -63,7 +63,8 @@
 			
 		}
 		
-		.product_box {
+		.product_box,
+		.product_box_product_options {
 			
 			background: white;
 			border: 1px solid #ddd;
@@ -80,7 +81,17 @@
 			
 		}
 		
+		.product_box {
+			
+			padding: 1em 1em 0 1em;
+			
+		}
+		
 		.product_box_product_options {
+			
+			padding: 1em;
+			margin:0 300px 0 0;
+			position: relative;
 			
 			h2 { font-size: 1em; }
 			
@@ -97,6 +108,12 @@
 				}
 								
 			}
+			
+		}
+		
+		input {
+			
+			margin-bottom: 1em;
 			
 		}
 		
@@ -320,5 +337,83 @@
 	// Values from Foundation Buttons
 	padding: 1rem 2rem 1.0625rem 2rem !important;
 	font-size: 1rem !important;
+	
+}
+
+/* ===============================================================
+	
+			Media Queries for E-Commerce Pages			
+	
+=============================================================== */
+
+/* Medium */
+
+@media only screen and (min-width:40.0625em) and (max-width:64em){
+	
+	#skin_Sapphire.page_shop,
+	#skin_Sapphire.page_store {
+	
+		// border-top: 5px solid red;
+		
+		ul.catalogue_productlist {
+			
+			li {
+				
+				width: 50%;
+				
+			}
+			
+		}
+	
+	}
+	
+}
+
+/* Small */
+
+@media only screen and (max-width: 40em){
+	
+	#skin_Sapphire.page_shop,
+	#skin_Sapphire.page_store {
+	
+		// border-top: 5px solid orange;
+		
+		#product {
+			
+			.product_box,
+			.product_box_product_options {
+				
+				margin: 0 0 1em 0;
+				
+			}
+			
+			.product_images {
+				
+				float: none;
+				width: 100%;
+				
+			}
+			
+			#image_thumb:after {
+				
+				content: "";
+				display: block;
+				clear: both;
+				
+			}
+			
+		}
+		
+		ul.catalogue_productlist {
+			
+			li {
+				
+				width: 50%;
+				
+			}
+			
+		}
+	
+	}
 	
 }

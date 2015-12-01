@@ -187,6 +187,15 @@ function reOrderCSSImports(){
 	
 }
 
+/**
+ *	Uitlity Function for easily setting back buttons
+ * 
+ */		
+
+function goBack() {
+    window.history.back();
+}
+
  window.onload = function() { 
   
     // Delay to allow the async Google Ads to load
