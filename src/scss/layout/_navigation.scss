@@ -8,12 +8,35 @@
 	
 	// Top Level Navigation List In Sidebar
 	
+	#page-root {
+		
+		padding: 5px 5px 5px 10px;
+		background: $colour_primary;
+		color: white;
+		display: block;
+		font-weight: bold;
+		
+		@include border-radius(3px 3px 0px 0px);
+		
+	}
+	
 	ul.level_1 {
 			
 		list-style: none;
 		margin: 0;
+		border: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 0;
+		border-bottom: none;
+		list-style: none;
+		background: white;
 		
-		a.current:hover { color: white;	}
+		.current {
+			
+			border-left: 5px solid $colour_primary;
+			border-bottom: 1px solid $colour_primary;
+			background: rgba(23, 66, 131, 0.1);
+			
+		}
 		
 		li {
 			
@@ -24,25 +47,7 @@
 				font-weight: bold;
 			
 			}
-			
-			.msl-itemhassubnav,
-			.current {
 						
-				display: block;
-				background: $colour_primary;
-				color: white;
-				font-size: 0.9em;
-						
-			}
-			
-			.msl-itemhassubnav {
-				
-				// Now isn't this a more sensible way to do border-raidus.
-				@include border-radius(3px 3px 0px 0px);
-				padding-left: 10px;
-				
-			}
-			
 		}
 		
 		> li:not(:last-child){
@@ -60,9 +65,15 @@
 		border: 1px solid rgba(0,0,0,0.1);
 		border-bottom: 0;
 		border-bottom: none;
+		border-left: 5px solid $colour_primary;
 		list-style: none;
 		
-		a.current:hover { color: #444;	}
+		.current {
+			
+			border-left: none;
+			border-bottom: none;
+			
+		}
 		
 		li {
 			
@@ -72,13 +83,13 @@
 				font-size: 90%;
 				color: #444;
 				display:block;
-				border-bottom: 1px solid #ccc;
+				border-bottom: 1px solid rgba(0,0,0,0.1);
 		
 			}
 			
 			.current {
 				
-				background: rgba(23, 66, 131, 0.1);
+				color: #444;
 				
 			}
 		

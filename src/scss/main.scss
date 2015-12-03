@@ -9,13 +9,15 @@
 @import "layout/navigation";
 @import "layout/footer";
 
+@import "modules/data-tables";
+
 @import "components/adverts";
 @import "components/calender";
 @import "components/comments";
 @import "components/news";
 @import "components/fourms";
 @import "components/notifications";
-@import "components/orbitslider"; // This needs renaming as it isn't technically a foundaiton Orbit Slider!
+@import "components/orbitslider";
 @import "components/shop";
 @import "components/surveys";
 @import "components/polls";
@@ -26,73 +28,26 @@
 @import "pages/student-groups";
 @import "pages/news";
 
-.vp_hint { display: block; } // Whats this? 
+/* DEBUG - It's a mystery */
 
-/* TEMP FOR TESTING */
+.vp_hint { display: block; }
 
-#aspnetForm {
-	
-	height: 100%;
-	position: relative;
-	
-}
+/* DEBUG - 100% Height for Login Page */
 
-#ctl00_Main_ProductCtl1_lblOptionNote { // Random Yellow Box on Product Page
-	
-	display: none;
-	
-}
+#aspnetForm { height: 100%;	position: relative; }
 
-.advert {
-	
-	margin: 10px 0;
-	
-	a {
-		
-		display: block;
-		
-		img {
-		
-			width: 100%;
-			height: auto;
-		
-		}
-		
-	}
-	
-	a:before {
-		
-		content: "Advertisment";
-		display: block;
-		font-weight: bold;
-		color: black;
-		font-size: 0.8rem;
-		
-	}
-	
-}
+/* DEBUG - Random Yellow Box on Product Pages */
 
-/* SHAME LAZY SCSS */
+#ctl00_Main_ProductCtl1_lblOptionNote { display: none; }
+
+/* DEBUG - Testing Conditional Styling for the elections pages */
 
 #skin_Sapphire.page_elections {
 	
-	nav.master {
-		
-		background: #FF3399;
-		
-	}
+	nav.master { background: #FF3399; }
 	
-	.top-bar-section>ul>.divider, .top-bar-section>ul>[role="separator"] {
-		
-		border-right: solid 1px rgba(0,0,0,0.3);
-		
-	}
+	.top-bar-section>ul>.divider, .top-bar-section>ul>[role="separator"] { border-right: solid 1px rgba(0,0,0,0.3);	}
 	
-	.contain-to-grid, .top-bar,
-	.top-bar-section li:not(.has-form) a:not(.button) {
-		
-		background: #801a4d;
-		
-	}
+	.contain-to-grid, .top-bar, .top-bar-section li:not(.has-form) a:not(.button) {	background: #801a4d; }
 	
 }

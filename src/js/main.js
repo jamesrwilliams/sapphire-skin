@@ -247,6 +247,9 @@ $(document).ready(function(){
 	
 	console.time("JS"); // Start a Debug Timer for the execute time of all the JS.
 	
+	
+	reOrderCSSImports();
+	
 	/*  Functions that apply to all site pages */
 	
 	
@@ -265,8 +268,6 @@ $(document).ready(function(){
 	var deadline = '2016-01-11';
 			
 	console.log(getTimeRemaining(deadline));
-			
-	
 	
 	sortNavigation();
 	sortSportsClubs();
@@ -290,6 +291,17 @@ $(document).ready(function(){
 		$(".orbitslider .news_1col .news_all").remove();
 		
 		Clock.start();
+		
+	}
+	
+	if($("#skin_Sapphire.page_student-reps.page_course").length > 0){
+		
+		$.getScript("https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", function(){
+			
+			$('.tableizer-table').DataTable();
+			
+		});
+		
 		
 	}
 	
@@ -395,7 +407,6 @@ $(document).ready(function(){
 	
 	//* Testing
 	
-	reOrderCSSImports();
 	
 	/* */
 	

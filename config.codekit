@@ -1633,6 +1633,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/src\/scss\/modules\/_data-tables.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/scss\/modules\/_data-tables.scss",
+		"outputAbbreviatedPath": "\/src\/scss\/css\/_data-tables.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/src\/scss\/modules\/shop\/_shop.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1658,6 +1674,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/scss\/modules\/shop\/components\/_basket.scss",
 		"outputAbbreviatedPath": "\/src\/scss\/modules\/shop\/css\/_basket.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/src\/scss\/modules\/shop\/components\/_checkout.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/scss\/modules\/shop\/components\/_checkout.scss",
+		"outputAbbreviatedPath": "\/src\/scss\/modules\/shop\/css\/_checkout.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1886,7 +1918,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "James Williams",
+"lastSavedByUser": "SU Web",
 "manualImportLinks": {
 	},
 "projectAttributes": {

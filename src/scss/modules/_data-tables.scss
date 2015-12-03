@@ -1,0 +1,53 @@
+.dataTables_length {
+	
+	width: 20%;
+	display: inline-block;
+	
+	select { width: initial; }
+	
+}
+
+.dataTables_filter {
+	
+	display: inline-block;
+	width: 80%;
+	
+}
+
+.dataTables_paginate {
+	
+	position: relative;
+	width: 100%;
+	
+	.next {
+		
+		float: right;
+		
+		@extend .info-button;
+		
+	}
+	
+	.previous {
+
+		float: left;
+		
+		@extend .info-button;
+		
+	}
+	
+	> span {
+		
+		position: absolute;
+		display: block;
+		width: 100%;
+		text-align: center;
+		
+		a {
+			
+			@extend .gray-button;
+			
+		}
+		
+	}
+	
+}
