@@ -4,7 +4,7 @@ We know we have some of the best creative talent in the country right on our doo
 
 ## Slack Team
 
-Join in the conversation and discuss developments and work about this project in the [SUWebTeam](suwebteam.slack.com) Slack group.
+Join in the conversation and discuss developments and work about this project in the [SUWebTeam](http://suwebteam.slack.com) Slack group.
 
 ## Getting Started
 
