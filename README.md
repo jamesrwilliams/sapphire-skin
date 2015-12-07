@@ -2,6 +2,14 @@
 
 Sapphire is the new theme for the University of Gloucestershire Students' Union website. Built on Zurb Foundation 5 it brings the Unions' website up-to-date embracing a new responsive clean design.
 
+## How to Contribute
+
+Join our slack team suwebteam.slack.com to join the discussion and suggest new ideas and developments.
+
+## Changelogs
+
+## Development Blog
+
 ## MSL Dependencies
 
 The following files are referenced in the template files under the MSL Snippets and Scripts and resources:
@@ -45,3 +53,4 @@ Page Tempalte | Description |
 ## Credits 
 
 Zurb Foundation 5 - https://github.com/zurb/foundation
+
