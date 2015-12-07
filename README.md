@@ -4,7 +4,7 @@
 ## Contribute
 
 Contributions are always welcome!
-Please read the [contribution guidelines](contributing.md) first.
+Please read the [contribution guidelines](CONTRIBUTING.md) first.
 
 ## Credits 
 

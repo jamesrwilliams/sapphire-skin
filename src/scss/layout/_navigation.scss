@@ -32,9 +32,8 @@
 		
 		.current {
 			
-			border-left: 5px solid $colour_primary;
-			border-bottom: 1px solid $colour_primary;
 			background: rgba(23, 66, 131, 0.1);
+			border-bottom: 1px solid rgba(0,0,0,0.1);
 			
 		}
 		
@@ -65,7 +64,6 @@
 		border: 1px solid rgba(0,0,0,0.1);
 		border-bottom: 0;
 		border-bottom: none;
-		border-left: 5px solid $colour_primary;
 		list-style: none;
 		
 		.current {
@@ -109,16 +107,6 @@
 		list-style-position: inside;
 		
 	}
-	
-}
-
-// Highlight the Current Page Link
-
-
-
-.current:hover {
-	
-	color: black;
 	
 }
 

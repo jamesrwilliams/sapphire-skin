@@ -154,6 +154,11 @@ function sortSportsClubs(){
 	
 }
 
+ function isEmpty( el ){
+      return !$.trim(el.html())
+  }
+  
+
 /**
  *	Rearrange Naviagation	
  *
@@ -239,7 +244,7 @@ function getTimeRemaining(endtime){
 	}
 
 /**
- *	
+ *	Core Onload Function
  * 
  */		
 
@@ -291,6 +296,30 @@ $(document).ready(function(){
 		$(".orbitslider .news_1col .news_all").remove();
 		
 		Clock.start();
+		
+	}
+	
+	if($('#skin_Sapphire.page_full-time-officers').length > 0){
+		
+		/* Find and Remove empty p.leaders in the news_list */
+		
+		$(".news_item").each(function(){
+			
+			if( $(this).find('p.leader').is(':empty') ) {
+		
+				$(this).find('p.leader').remove();
+			
+			}	
+			
+		});
+		
+		/* Add reveal interaction to items */
+		
+		$(".news_item").click(function(){
+			
+			$(this).find("p.leader").slideToggle();
+			
+		});
 		
 	}
 	
