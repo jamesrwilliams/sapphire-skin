@@ -15,25 +15,36 @@
 		color: white;
 		display: block;
 		font-weight: bold;
+		font-size: 0.8125rem;
+		
 		
 		@include border-radius(3px 3px 0px 0px);
 		
 	}
 	
+	ul.level_1,
+	ul.level_2 {
+		
+		
+		
+	}
+	
 	ul.level_1 {
-			
+		
+		a { font-size: 0.8125rem; }
+		
 		list-style: none;
+		
 		margin: 0;
+		
 		border: 1px solid rgba(0,0,0,0.1);
-		border-bottom: 0;
-		border-bottom: none;
+		
 		list-style: none;
 		background: white;
 		
 		.current {
 			
 			background: rgba(23, 66, 131, 0.1);
-			border-bottom: 1px solid rgba(0,0,0,0.1);
 			
 		}
 		
@@ -60,28 +71,24 @@
 	ul.level_2 {
 		
 		background: white;
-		margin: 0;
+		margin: 0;		
 		border: 1px solid rgba(0,0,0,0.1);
+		border-top: 2px solid rgba(0,0,0,0.1);
 		border-bottom: 0;
-		border-bottom: none;
+		border-right:0;
+		border-left: 0;
+
 		list-style: none;
-		
-		.current {
-			
-			border-left: none;
-			border-bottom: none;
-			
-		}
 		
 		li {
 			
 			a {
 				
 				padding: 5px;
-				font-size: 90%;
 				color: #444;
+				font-weight: normal;
 				display:block;
-				border-bottom: 1px solid rgba(0,0,0,0.1);
+				border-bottom: 1px solid rgba(0,0,0,0.2);
 		
 			}
 			
@@ -93,7 +100,11 @@
 		
 		}
 		
-		border-bottom:0;
+		> li:not(:last-child) a{
+			
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+			
+		}
 		
 	}
 	
@@ -102,7 +113,6 @@
 		border-top: 1px solid rgba(0,0,0,0.1);
 		margin: 0;
 		padding: 0;
-		font-size: 90%;
 		list-style: circle;
 		list-style-position: inside;
 		

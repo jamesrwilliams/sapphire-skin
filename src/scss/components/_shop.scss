@@ -173,7 +173,7 @@
 	
 	background: #333;
 	padding: 0.9375rem;
-	width: 400px;
+	width: 100%;
 	max-width: 100%;
 	color: white;
 	
@@ -348,12 +348,26 @@
 
 /* Medium */
 
+@media only screen and (min-width: 40.063em) { 
+	
+	#basket {
+		
+		width: 400px; // Test
+		
+	}
+	
+} 
+
 @media only screen and (min-width:40.0625em) and (max-width:64em){
+	
+	
 	
 	#skin_Sapphire.page_shop,
 	#skin_Sapphire.page_store {
 	
 		// border-top: 5px solid red;
+		
+		
 		
 		ul.catalogue_productlist {
 			

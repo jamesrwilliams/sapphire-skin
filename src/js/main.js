@@ -21,7 +21,7 @@ function basketCount(){
 	
 	if( productcount > 0 ){
 		
-		$('.basket_dropdown > a').append(" (" + productcount + ")");
+		$('.basket_dropdown > a, .mobile-only-basket-ui > a').append(" (" + productcount + ")");
 		
 	}
 	
