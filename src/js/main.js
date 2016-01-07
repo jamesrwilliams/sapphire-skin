@@ -285,6 +285,37 @@ $(document).ready(function(){
 	
 	sortNavigation();
 	sortSportsClubs();
+	
+	if($("#skin_Sapphire").hasClass("page_feedback")){
+		
+		var element = $("msl-idea-status");
+		var feedback_status = element.innerHTML;
+
+		switch (feedback_status) {
+		
+			case "Current":
+		        element.className += " alertbox";
+					break;
+		        
+		    case "Passed":
+		        
+		      	element.className += " alertbox";
+		        break;
+		        
+		   case "Rejected":
+		       
+		        element.className += " alertbox";
+		        break;
+		        
+		   case "Locked":
+		        
+		        element.className += " alertbox";
+		        break;
+		
+		}
+		
+	}
+
 	basketCount();
 	
 	// Adds the Visibility Event Listener for the Orbit Slider
