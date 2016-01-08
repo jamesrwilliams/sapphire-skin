@@ -157,7 +157,10 @@ img {
 == Need to Move these to their respective pages sheets
 */
 
-input[value="Add to Basket"]{
+.msl-idealist { margin-top: 20px; }
+
+input[value="Add to Basket"],
+#ctl00_idealist_btnAddIdea {
 	
 	@extend .blue-button;
 		
