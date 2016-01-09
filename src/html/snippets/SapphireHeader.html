@@ -38,7 +38,7 @@
 				
 				<li class="logged-out"><a href="/login/">Login</a></li>
 				
-				<li class="logged-out"><a href="#">Register</a></li>
+				<li class="logged-out"><a href="/account/register/students/">Register</a></li>
 				
 				<li class="has-dropdown logged-in">
 						
@@ -115,7 +115,7 @@
 	
 	<div class="small-12 column">
 
-		<div class="contain-to-grid sticky">
+		<div class="contain-to-grid">
 			
 			<nav class="top-bar" data-topbar role="navigation" data-options="is_hover: false, mobile_show_parent_link: true">
 				
@@ -196,11 +196,8 @@
 						
 							<ul class="dropdown">
 								
-								<li><a>All Societies</a></li>
-								<li><a>News</a></li>
-								<li><a>Handbook</a></li>
-								<li><a>Start a new Society</a></li>
-								
+								<MSL:Navigation navigation_name="sapphire_societies"></MSL:Navigation>
+																
 							</ul>	
 							
 						</li>
@@ -233,10 +230,10 @@
 						
 						<li class="has-dropdown">
 						
-							<a href="/about#">About</a>
+							<a href="/more">More</a>
 							<ul class="dropdown">
 							
-								<MSL:Navigation navigation_name="sapphire_about"></MSL:Navigation>
+								<MSL:Navigation navigation_name="sapphire_more"></MSL:Navigation>
 							
 							</ul>
 							

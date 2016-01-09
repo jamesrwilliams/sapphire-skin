@@ -8,7 +8,8 @@
 	
 	// Top Level Navigation List In Sidebar
 	
-	#page-root {
+	#page-root,
+	a.org_link {
 		
 		padding: 5px 5px 5px 10px;
 		background: $colour_primary;
@@ -17,15 +18,7 @@
 		font-weight: bold;
 		font-size: 0.8125rem;
 		
-		
 		@include border-radius(3px 3px 0px 0px);
-		
-	}
-	
-	ul.level_1,
-	ul.level_2 {
-		
-		
 		
 	}
 	

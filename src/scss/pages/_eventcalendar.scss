@@ -199,18 +199,42 @@
 .event_tickets {
 	
 	font-size: 1em;
+	
 	font-weight: bold;
 	
 	@extend .panel;
 	
-	#ctl00_Main_ctl09_rptTickets_ctl00_btnAddTicket {
+	.event_ticket input {
 	
 		@extend .blue-button;
 		@extend .expanded-button;
 		display: block;
-		margin-top: 10px;
+		margin-bottom: 10px;
+	
+	}
+	
+	.event_ticket select {
+		
+		width: 50%;
+		
+	}
+	
+	.event_ticket:not(:last-child) {
+		
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 10px;
 		
 	}
 	
 }
 
+.datetime {
+	
+	background: white;
+	
+	@extend .panel;
+	
+	border-top: 0;
+	
+	
+}
