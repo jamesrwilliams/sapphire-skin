@@ -258,7 +258,16 @@ $(document).ready(function(){
 	/*  Functions that apply to all site pages */
 	
 	
-	$(document).foundation(); // Init Foundation Components
+	$(document).foundation({
+		"magellan-expedition": {
+			active_class: 'active', // specify the class used for active sections
+			threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
+			destination_threshold: 125, // pixels from the top of destination for it to be considered active
+			throttle_delay: 50, // calculation throttling to increase framerate
+			fixed_top: 45, // top distance in pixels assigend to the fixed element on scroll
+			offset_by_height: true // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
+		}
+	}); // Init Foundation Components
 	
 	if($('.sidepanel.controlpanel').length > 0){
 		
@@ -276,6 +285,37 @@ $(document).ready(function(){
 	
 	sortNavigation();
 	sortSportsClubs();
+	
+	if($("#skin_Sapphire").hasClass("page_feedback")){
+		
+		var element = $("msl-idea-status");
+		var feedback_status = element.innerHTML;
+
+		switch (feedback_status) {
+		
+			case "Current":
+		        element.className += " alertbox";
+					break;
+		        
+		    case "Passed":
+		        
+		      	element.className += " alertbox";
+		        break;
+		        
+		   case "Rejected":
+		       
+		        element.className += " alertbox";
+		        break;
+		        
+		   case "Locked":
+		        
+		        element.className += " alertbox";
+		        break;
+		
+		}
+		
+	}
+
 	basketCount();
 	
 	// Adds the Visibility Event Listener for the Orbit Slider

@@ -579,6 +579,28 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/src\/js\/page-scripts\/feedback.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/js\/page-scripts\/feedback.js",
+		"outputAbbreviatedPath": "\/src\/js\/page-scripts\/min\/feedback-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/src\/js\/page-scripts\/min\/feedback-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/js\/page-scripts\/min\/feedback-min.js",
+		"outputAbbreviatedPath": "\/src\/js\/page-scripts\/min\/min\/feedback-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/src\/js\/vendor\/fastclick.js": {
 		"fileType": 64,
 		"ignore": 0,
