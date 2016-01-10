@@ -81,12 +81,12 @@ var Clock = {
 		this.interval = setInterval(function () {
 		self.totalSeconds += 1;
 
-		$('.orbitslider .news_1col > div:first')
+		$('.main_news_slider .news_1col > div:first')
 		    .fadeOut(1000)
 		    .next()
 		    .fadeIn(1000)
 		    .end()
-		    .appendTo('.orbitslider .news_1col');
+		    .appendTo('.main_news_slider .news_1col');
 		
 		
 		
@@ -329,15 +329,23 @@ $(document).ready(function(){
 	
 	----------------------------- */
 	
+	/*
+	
 	if($('#skin_Sapphire.page_root').length > 0){
 		
-		$(".orbitslider .news_1col > div:gt(0)").hide();
-		$(".orbitslider .news_1col .killfloat").remove();
-		$(".orbitslider .news_1col .news_all").remove();
+		$(".main_news_slider .news_1col > div:gt(0)").hide();
+		$(".main_news_slider .news_1col .killfloat").remove();
+		$(".main_news_slider .news_1col .news_all").remove();
 		
 		Clock.start();
 		
-	}
+	} */
+	
+	$(".main_news_slider .news_1col > div:gt(0)").hide();
+	$(".main_news_slider .news_1col .killfloat").remove();
+	$(".main_news_slider .news_1col .news_all").remove();
+		
+	Clock.start();
 	
 	if($('#skin_Sapphire.page_full-time-officers').length > 0){
 		
