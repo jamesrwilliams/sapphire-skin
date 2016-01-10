@@ -160,7 +160,8 @@ img {
 .msl-idealist { margin-top: 20px; }
 
 input[value="Add to Basket"],
-#ctl00_idealist_btnAddIdea {
+#ctl00_idealist_btnAddIdea,
+.page_contact-us input#submit {
 	
 	@extend .blue-button;
 		

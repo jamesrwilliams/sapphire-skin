@@ -1,0 +1,31 @@
+#ctl00_idealist_btnAddIdea {
+	
+	@extend .blue-button;
+	
+}
+
+.msl-idealist {
+	
+	margin-left: 0;
+	
+}
+
+.msl-idea {
+	
+	@extend .panel;
+	
+	padding-left: 6em;
+	
+}
+
+#ctl00_idealist_btnAdd {
+	
+	@extend .green-button;
+	
+}
+
+#ctl00_idealist_btnCancel {
+	
+	@extend .red-button;
+	
+}

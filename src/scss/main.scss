@@ -22,6 +22,7 @@
 @import "components/surveys";
 @import "components/polls";
 @import "components/jobs";
+@import "components/feedback";
 
 @import "pages/login";
 @import "pages/homepage";
@@ -63,7 +64,7 @@
 
 /* DEBUG - It's a mystery */
 
-.vp_hint { display: block; }
+.vp_hint { display: block; } // Form Hints?
 
 /* DEBUG - 100% Height for Login Page */
 
