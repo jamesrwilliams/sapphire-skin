@@ -29,3 +29,59 @@
 	@extend .red-button;
 	
 }
+
+.msl-idea {
+
+	border-bottom: 1px solid #ccc;
+	
+	@extend .panel;
+	
+	.msl-idea-score {
+		
+		background: none;
+		width: inherit;
+		border-right: 0;
+		
+	}
+	
+	.label {
+		
+		background: none;
+		
+	}
+	
+	.msl-idea-comments {
+		
+		a { 
+		
+			background: none; 
+			border-radius: 0;
+			
+		}
+		
+		a:before {
+			
+			display: none;
+			
+		}
+		
+	}
+	
+}
+
+/* OVERRIDES FOR MSL BEING A PERSISANT TWIT */
+
+li.msl-idea .msl-idea-comments a {
+	
+	background: none;
+	border-radius: 0;
+	
+}
+
+[id*="idea-comments"] dl.comments span.comment_details {
+	
+	background: #004a8b;
+	padding: 0;
+	font-size: 100%;
+	
+}

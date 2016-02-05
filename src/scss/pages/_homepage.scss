@@ -92,7 +92,20 @@
 		
 		.event_item {
 			
+			min-height: 120px;
 			padding: 10px;
+			
+			dl {
+				
+				margin-bottom: 0;
+				
+				dt {
+					
+					margin-bottom: 0;
+					
+				}
+				
+			}
 			
 			dt > a:first-of-type {
 				
@@ -111,13 +124,32 @@
 			
 		}
 		
+		.msl_event_description,
+		.msl_event_hook,
+		.msl_event_time {
+			
+			margin-bottom: 0;}
+			
+		.msl_event_location {
+			
+			display: none;
+			
+		}
+		
 	}
 	
 	.home-news {
 		
 		.news_item {
 			
+			min-height: 120px;
 			padding: 10px;
+			
+			p.leader {
+				
+				margin-bottom: 0;
+				
+			}
 			
 		}
 		
@@ -129,5 +161,47 @@
 		}
 		
 	}
+	
+	.button-group.even-2.stack-for-small a {
+		
+		// @include border-radius(3px);
+		font-weight: bold;
+		
+	}
+	
+	.news_all {
+		
+		padding: 10px;
+		color: white;
+		background: $colour_primary;
+		
+		a.msl_edit { background: none; padding: 0; color: #FFF; font-weight: bold; }
+		
+	}
+	
+	/* Animated Timer Element that shows the progress through the homepage sldies 
+	
+	.timer-display {
+	  height: 5px;
+	  content: "";
+	  display:block;
+	  width: 100%;
+	  position: absolute;
+	  bottom: 0;
+	  background: red;
+	  animation-name: slidein;
+	  animation-duration: 7s;
+	  animation-iteration-count: infinite;
+	  animation-timing-function: ease-in;
+	  animation-fill-mode: forwards;
+	  animation-delay: 1s;
+	}
+	
+	@-webkit-keyframes slidein {
+	   0%, 10%       { width: 0%; }
+	   90%, 100%     { width: 100%; }
+	}
+	
+	/* */
 	
 }

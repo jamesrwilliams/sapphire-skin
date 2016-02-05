@@ -68,7 +68,7 @@ function handleVisibilityChange() {
  * 
  */		
 
-var slideSpeed = 10000;
+var slideSpeed = 8000;
 
 var Clock = {
 		
@@ -264,7 +264,7 @@ $(document).ready(function(){
 			threshold: 0, // how many pixels until the magellan bar sticks, 0 = auto
 			destination_threshold: 125, // pixels from the top of destination for it to be considered active
 			throttle_delay: 50, // calculation throttling to increase framerate
-			fixed_top: 45, // top distance in pixels assigend to the fixed element on scroll
+			fixed_top: 0, // top distance in pixels assigend to the fixed element on scroll
 			offset_by_height: true // whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.
 		}
 	}); // Init Foundation Components
@@ -371,6 +371,18 @@ $(document).ready(function(){
 		
 	}
 	
+	if($("#skin_Sapphire.page_jobs").length > 0){
+	
+		if ($('#job-signup input[checked=checked]').length) {
+			$('.vacancy').show();
+			$('#job-signup').hide();
+		}
+		else {
+			$('.vacancy').remove();
+		}
+		
+	}
+	
 	if($("#skin_Sapphire.page_student-reps.page_course").length > 0){
 		
 		$.getScript("https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js", function(){
@@ -383,17 +395,35 @@ $(document).ready(function(){
 	}
 	
 	if ($('#skin_Sapphire').length > 0) {
+		
+		console.log("Product on Page");
         
-    	$(".msl-product-image").each(function() {  
+    	$(".msl-product-image").each(function() {
 
-            var imgsrc = this.src;         
-            $(this).attr("src", getPathFromUrl(imgsrc));
+            var oldURL = this.src; 
+            
+            var index = 0;
+            var newURL = oldURL;
+            index = oldURL.indexOf('?');
+            
+            if(index == -1){
+	            
+	            index = oldURL.indexOf('#');
+	            
+            }
+            if(index != -1){
+	            
+	            newURL = oldURL.substring(0, index);
+	            
+            }
+                  
+            $(this).attr("src", newURL);
             $(this).attr('style', '');
 
         });  
 	}
 	
-	if($('#skin_Sapphire.page_whatson ').length > 0){
+	if($('#skin_Sapphire.page_whatson, #skin_Sapphire.page_events').length > 0){
 		
 		console.log("Whats on Page");
 		
@@ -484,6 +514,7 @@ $(document).ready(function(){
 	
 	//* Testing
 	
+
 	
 	/* */
 	

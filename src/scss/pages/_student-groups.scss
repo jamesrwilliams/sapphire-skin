@@ -47,11 +47,13 @@
 	.msl_facebook {
 		
 		display: block;
-		background: $colour_primary_light;
+		background: $colour_primary;
 		border-left: 5px solid $colour_accent;
 		text-indent: -9999px;
 		margin: 10px 0;
 	    padding: 5px 0;
+	    
+	    @include border-radius(3px);
 		
 	}
 	
@@ -65,6 +67,7 @@
 		color: white;
 		text-indent: 0;
 		font-weight: bold;
+		font-size: 0.87rem;
 		
 		padding: 5px;
 		

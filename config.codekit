@@ -579,12 +579,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/src\/js\/page-scripts\/elections-countdown.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/js\/page-scripts\/elections-countdown.js",
+		"outputAbbreviatedPath": "\/src\/js\/page-scripts\/min\/elections-countdown-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/src\/js\/page-scripts\/feedback.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/js\/page-scripts\/feedback.js",
 		"outputAbbreviatedPath": "\/src\/js\/page-scripts\/min\/feedback-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/src\/js\/page-scripts\/min\/elections-countdown-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/js\/page-scripts\/min\/elections-countdown-min.js",
+		"outputAbbreviatedPath": "\/src\/js\/page-scripts\/min\/min\/elections-countdown-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -1781,6 +1803,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/src\/scss\/modules\/shop\/components\/_checkout.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/scss\/modules\/shop\/components\/_checkout.scss",
+		"outputAbbreviatedPath": "\/src\/scss\/modules\/shop\/css\/_checkout.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/src\/scss\/normalize.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -2034,7 +2072,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "James Williams",
+"lastSavedByUser": "SU Web",
 "manualImportLinks": {
 	},
 "projectAttributes": {
