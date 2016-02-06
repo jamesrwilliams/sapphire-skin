@@ -187,6 +187,7 @@ function sortNavigation(){
 
 function reOrderCSSImports(){
 
+	$("head").append($("link[href='/stylesheet/Sapphire/foundation-core.css']"));
 	$("head").append($("link[href='/stylesheet/Sapphire/foundation.css']"));
 	$("head").append($("link[href='/stylesheet/Sapphire/main.css']"));
 	
